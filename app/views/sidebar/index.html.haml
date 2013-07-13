@@ -1,0 +1,4 @@
+- cache("github", :expires_in => 10.minutes) do
+  %i.icon-github.watermark
+  - collection.each do |event|
+    = render "/github/event", :event => event

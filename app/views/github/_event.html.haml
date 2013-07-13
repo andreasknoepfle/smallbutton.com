@@ -1,0 +1,23 @@
+- if event.type == "PushEvent"
+  .main-sidebarevents
+    %h4
+      %i.icon-code
+      = event.repo.name
+    %ul.commits
+      - event.payload.commits.each do |commit|
+        %li.commit{:id => commit.sha}
+          %span.commit-sha
+            - url = "https://github.com/"+event.repo.name+"/commit/"+commit.sha
+            = link_to commit.sha.slice(0..7), url
+          %span.commit-msg
+            = truncate commit.message , :length => 120
+- elsif event.type == "GollumEvent"
+  .main-sidebarevents
+    %h4
+      %i.icon-pencil
+      = event.repo.name
+    %ul.pages
+      - event.payload.pages.each do |page|
+        %li.page
+          %i.icon-file-text
+          = link_to page.page_name, page.html_url

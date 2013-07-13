@@ -1,0 +1,65 @@
+
+.navigation {
+  font-family: 'Quicksand', Helvetica, sans-serif;
+  background-color: $color_pomegranate;
+
+  margin: 0 0 - $grid-padding;
+  padding: 0 $grid-padding;
+
+}
+.navigation-inner {
+   @include container($total-columns, $break);
+   padding-left: 0px;
+   padding-right: 0px;
+
+}
+
+.navigation > .navigation-inner > ul {
+  display:block;
+  list-style-type:none;
+  margin:0;
+  padding: 0;
+}
+
+.navigation > .navigation-inner > ul > li {
+  float:left;
+  margin-left:1px;
+
+}
+
+  .navigation > .navigation-inner > ul.right {
+    @include at-breakpoint($break-small) {
+      float:right;
+    }
+  }
+
+
+.navigation > .navigation-inner > ul > li > a {
+  @include unstyled-link;
+  display:block;
+  padding:1em 1.5em;
+  background-color: $color_alizarin;
+  color: $color_clouds;
+  font-weight: 700;
+  @include box-shadow($color_pomegranate 0px 30px 20px -20px inset);
+  &:hover {
+    background-color:  lighten($color_alizarin,3%);
+    @include box-shadow($color_pomegranate 0px 10px 10px -10px inset);
+  }
+
+}
+
+.navigation > .navigation-inner > ul > li > .logo {
+
+  font-size: 1.3em;
+   display:block;
+  padding: 0.5em 1em 0.5em 1em ;
+  color: $color_clouds;
+  @include text-shadow(darken($color_pomegranate,10%) 0px -1px 0px );
+
+
+  a {
+    @include unstyled-link;
+    &:hover { color: #FFF}
+  }
+}

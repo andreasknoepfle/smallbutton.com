@@ -1,0 +1,16 @@
+%span.main-sidedate
+  = distance_of_time_in_words_to_now(item.created_at)
+  ago
+.main-tags
+  - item.icons.each do |icon|
+    %i{:class => icon}
+  %ul.taglist
+    - item.tags.each do |tag|
+      %li
+        = tag
+.main-item
+  %h2
+    = item.title
+  %p#_5f69af0f6c23ef3e6d6a36a19a918c89d37916d2
+    = item.content
+.main-clear

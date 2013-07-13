@@ -1,0 +1,36 @@
+!!!
+%html
+  %head
+    %title smallbutton.com
+    %link{ :href => 'http://fonts.googleapis.com/css?family=Quicksand:400,700', :rel=>'stylesheet', :type=>'text/css'}
+    %link{ :href => 'http://fonts.googleapis.com/css?family=Open+Sans' , :rel=>'stylesheet', :type=>'text/css'}
+    = stylesheet_link_tag    "application", :media => "all"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+  %body
+    %nav.navigation
+      .navigation-inner
+        %ul.right
+          %li
+            %a{:href => "#"} First
+          %li
+            %a{:href => "#"} Second
+        %ul.left
+
+          %li
+            .logo
+              %i.icon-code.icon-large
+              = link_to "smallbutton.com",  root_path
+          -#%li
+            -#%a{:href => "#"} First
+          -#%li
+            -#%a{:href => "#"} Second
+    .main
+      = yield
+      .main-sidebar
+        %i.icon-spinner.icon-spin.watermark
+
+
+
+    %footer.info
+      = yield :scripts

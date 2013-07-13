@@ -1,0 +1,42 @@
+.main > .main-content {
+  .main-inner {
+    padding: 0em 1.5em;
+     @include box-shadow($color_silver 0px 3px 2px -2px);
+     border-bottom: $color_silver 1px solid;
+     position:relative;
+     .main-tags {
+        @include at-breakpoint($break-small) {
+          @include span-columns(1,6);
+          text-align:center;
+        }
+
+        color: $color_pomegranate;
+        padding-top:0.5em;
+        font-size: 2em;
+        ul.taglist
+         {
+           margin:0.5em 0;
+
+           padding: 0;
+           list-style-type:none;
+           font-size: 0.5em;
+         }
+     }
+     .main-item {
+       @include at-breakpoint($break-small) {
+        @include span-columns(5 omega,6);
+       }
+     }
+     .main-clear{
+        clear:both;
+     }
+     .main-sidedate {
+
+        top:1em;
+        right:1em;
+        position:absolute;
+        font-size:0.8em;
+
+     }
+  }
+}

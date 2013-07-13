@@ -1,0 +1,52 @@
+@import "compass/utilities/links/unstyled-link";
+@import "compass/css3/text-shadow";
+@import "compass/css3/box-shadow";
+@import "compass/utilities/general/clearfix";
+@import "compass/css3/border-radius";
+
+html {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  font-weight:400;
+}
+
+body {
+  margin: 0;
+  padding: 0px;
+
+    /* will also set the opacity of the link text */
+
+}
+
+
+
+.main {
+
+
+   padding: $gutter-width;
+   @include container($total-columns, $break);
+   $main-columns: 10;
+  @include at-breakpoint($break) {
+    .main-content{ @include span-columns(7,$main-columns) }
+    .main-sidebar { @include span-columns(3 omega, $main-columns) }
+  }
+}
+.main > .main-content {
+  @include border-top-radius;
+ background-color: $color_clouds;
+  padding: 0em 0em 0em 0em;
+
+
+}
+
+
+._jsPlumb_connector,._jsPlumb_endpoint {
+  display:none;
+  @include at-breakpoint($break) {
+    display:block;
+  }
+}
