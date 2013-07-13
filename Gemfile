@@ -20,7 +20,7 @@ gem 'async_partial'
 # Model
 
 gem 'acts-as-taggable-on'
-
+gem "rails_config"
 # Controller
 
 gem 'inherited_resources'
