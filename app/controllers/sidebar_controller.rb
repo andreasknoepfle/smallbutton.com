@@ -6,7 +6,7 @@ class SidebarController < InheritedResources::Base
     index!
   end
   def collection
-     client = Octokit::Client.new(:login => "andreasknoepfle", :oauth_token => "7efadc02607bedb20e8d07b6820e7a9e4a73f6c1")
+     client = Octokit::Client.new(:login => Settings.apis.github.user, :oauth_token => Settings.apis.github.token)
      client.user_events("andreasknoepfle")
 
   end

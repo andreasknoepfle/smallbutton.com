@@ -1,2 +1,4 @@
 apis:
-  github: githubtoken
+  github:
+    token: githubtoken
+    user: username
