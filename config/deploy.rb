@@ -2,14 +2,15 @@
 lock '3.1.0'
 
 set :application, 'smallbutton.com'
-set :repo_url, 'git@example.com:me/my_repo.git'
+set :repo_url, 'git@github.com:andreasknoepfle/smallbutton.com.git'
 
 # Default branch is :master
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
 
 # Default deploy_to directory is /var/www/my_app
-# set :deploy_to, '/var/www/my_app'
+set :deploy_to, '/var/www/smallbutton.com/'
 
+set :default_env, { path: "~/.gem/bin:$PATH" }
 # Default value for :scm is :git
 # set :scm, :git
 
