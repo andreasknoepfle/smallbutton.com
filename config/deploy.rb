@@ -10,7 +10,10 @@ set :repo_url, 'git@github.com:andreasknoepfle/smallbutton.com.git'
 # Default deploy_to directory is /var/www/my_app
 set :deploy_to, '/var/www/smallbutton.com/'
 
-set :default_env, { path: "~/.gem/bin:$PATH" }
+set :rbenv_type, :user
+set :rbenv_ruby, '2.1.1'
+
+
 # Default value for :scm is :git
 # set :scm, :git
 

@@ -38,6 +38,7 @@ gem 'bson_ext'
 group :development do
   gem 'capistrano-rails', '~> 1.0.0'
   gem 'capistrano-bundler'
+  gem 'capistrano-rbenv'
 end
 
 # Use debugger
