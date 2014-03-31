@@ -1,0 +1,25 @@
+!!!
+%html
+  %head
+    %title smallbutton.com
+    = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
+    = javascript_include_tag "application", "data-turbolinks-track" => true
+    = csrf_meta_tags
+  %body
+    .header
+      .header-inner
+        .header-logo
+          smallbutton.com
+        .header-nav
+          %ul
+            %li 
+              %a{:href => "#"} Projects
+            %li 
+              %a{:href => "#"}  Code
+            %li 
+              %a{:href => "#"}  Photos
+            %li 
+              %a{:href => "#"}  About 
+              
+    .main
+      = yield

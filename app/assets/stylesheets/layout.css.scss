@@ -1,0 +1,34 @@
+
+$primary-color: #27ae60;
+$screen-width: 80em;
+
+body {
+	background: #eee;
+	margin:0
+	}
+	
+.header {
+	background: $primary-color;
+}	
+
+.header-inner {
+	padding: 0 1em;
+	@include container($screen-width); 
+}	
+
+.header-logo {
+	@include span(4 of 12);
+}
+	
+.header-nav {
+	@include span(8 of 12);
+	@include omega;
+	ul {
+		float:right;
+	}
+	li {
+		display: inline-block; 
+		list-style-type: none;
+		margin-left: 1em;
+	}
+}

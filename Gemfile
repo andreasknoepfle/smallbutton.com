@@ -3,8 +3,19 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.4'
 
+# haml templates
+gem 'haml'
+
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.2'
+gem 'sass-rails'
+gem 'sprockets', '2.11.0' #http://stackoverflow.com/questions/22392862/undefined-method-environment-for-nilnilclass-when-importing-bootstrap
+group :assets do
+     gem 'susy' ,'~> 2.1.1'
+     gem 'bourbon'
+   
+end
+# Grid framework is susy
+
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -29,6 +40,7 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+# mongo db drivers
 gem 'mongoid', '~> 4.0.0.beta1', github: 'mongoid/mongoid'
 gem 'bson_ext'
 
@@ -39,6 +51,7 @@ group :development do
   gem 'capistrano-rails', '~> 1.0.0'
   gem 'capistrano-bundler'
   gem 'capistrano-rbenv'
+  gem 'erb2haml'
 end
 
 # Use debugger
