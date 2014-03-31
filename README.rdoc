@@ -1,13 +1,19 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
+Code for smallbutton.com
 
 * Ruby version
 
+  2.11
+
 * System dependencies
+
+** MongoDB 
+
+  sudo apt-key adv --keyserver keyserver.ubuntu.com --recv 7F0CEB10
+  sudo echo "deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen" | tee -a /etc/apt/sources.list.d/10gen.list
+  sudo apt-get -y update
+  sudo apt-get -y install mongodb-10gen
 
 * Configuration
 
@@ -21,8 +27,6 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* ...
+Image Licence:
+http://www.morguefile.com/archive/display/642784
 
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.

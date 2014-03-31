@@ -1,9 +1,9 @@
 
 $primary-color: #2980b9;
 $primary-color-alt: #3498db;
-$secondary-color-alt: #d35400;
-$secondary-color: #e67e22;
-$screen-width: 80em;
+$secondary-color: #d35400;
+$secondary-color-alt: #e67e22;
+$screen-width: 60em;
 $nav-height: 4em;
 
 body {
@@ -11,28 +11,33 @@ body {
 	margin: 0;
 	font-family: 'Open Sans', sans-serif;
 	}
-	
+
 .header {
 	background: $primary-color;
-}	
+}
 
 .header-inner {
-	padding: 0;
-	@include container($screen-width); 
-	
-}	
+	padding: 0em 1em;
+	@include container($screen-width);
+
+}
 
 .header-logo {
 	@include span(4 of 12);
-	color: white;
+
+	span {
+	  margin: 2px 0 0;
+	  float:left;
+	}
 	h1 {
+	  color: white;
 		font-size: 1.5em;
 		display: inline-block;
 		padding: 0.45em 1em;
 		margin:0;
 	}
 }
-	
+
 .header-nav {
 	@include span(8 of 12);
 	@include omega;
@@ -41,12 +46,12 @@ body {
 		float:right;
 	}
 	li {
-		display: inline-block; 
+		display: inline-block;
 		list-style-type: none;
 		margin-left: 0.5em;
 		background: $primary-color;
-		
-		
+
+
 	}
 	li:hover {
 		background: $primary-color-alt;
@@ -58,4 +63,21 @@ body {
 		color: white;
 		text-decoration: none;
 	}
+}
+
+
+.main {
+  a {
+    color: $secondary-color;
+    text-decoration: none;
+  }
+  a:hover {
+    color: $secondary-color-alt;
+  }
+}
+
+.main-inner {
+  @include container($screen-width);
+  padding: 1em 1em;
+
 }

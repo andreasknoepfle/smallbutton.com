@@ -1,0 +1,19 @@
+@import "susy";
+.project {
+
+  @include span(4 of 12);
+  &:nth-child(3) {
+    @include omega;
+  }
+  margin-bottom: 1em;
+
+}
+
+.project-inner {
+  background: white;
+  padding: 1em;
+
+  img {
+    width: 100%;
+  }
+}
