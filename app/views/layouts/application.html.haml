@@ -9,17 +9,27 @@
     .header
       .header-inner
         .header-logo
-          smallbutton.com
+          %h1
+            %i.fa.fa-book
+            smallbutton.com
         .header-nav
           %ul
             %li 
-              %a{:href => "#"} Projects
+              %a{:href => "#"} 
+                %i.fa.fa-flask
+                Projects
             %li 
-              %a{:href => "#"}  Code
+              %a{:href => "#"}  
+                %i.fa.fa-code
+                Code
             %li 
-              %a{:href => "#"}  Photos
+              %a{:href => "#"}
+                %i.fa.fa-camera
+                Photos
             %li 
-              %a{:href => "#"}  About 
+              %a{:href => "#"}  
+                %i.fa.fa-user
+                About 
               
     .main
       = yield

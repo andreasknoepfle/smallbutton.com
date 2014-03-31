@@ -1,10 +1,15 @@
 
-$primary-color: #27ae60;
+$primary-color: #2980b9;
+$primary-color-alt: #3498db;
+$secondary-color-alt: #d35400;
+$secondary-color: #e67e22;
 $screen-width: 80em;
+$nav-height: 4em;
 
 body {
 	background: #eee;
-	margin:0
+	margin: 0;
+	font-family: 'Open Sans', sans-serif;
 	}
 	
 .header {
@@ -12,23 +17,45 @@ body {
 }	
 
 .header-inner {
-	padding: 0 1em;
+	padding: 0;
 	@include container($screen-width); 
+	
 }	
 
 .header-logo {
 	@include span(4 of 12);
+	color: white;
+	h1 {
+		font-size: 1.5em;
+		display: inline-block;
+		padding: 0.45em;
+		margin:0;
+	}
 }
 	
 .header-nav {
 	@include span(8 of 12);
 	@include omega;
 	ul {
+		margin: 0 0;
 		float:right;
 	}
 	li {
 		display: inline-block; 
 		list-style-type: none;
-		margin-left: 1em;
+		margin-left: 0.5em;
+		background: $primary-color;
+		
+		
+	}
+	li:hover {
+		background: $primary-color-alt;
+		box-shadow: $primary-color 0em 1em 1em -1em inset;
+	}
+	a {
+		padding: 1em 1.5em;
+		display:block;
+		color: white;
+		text-decoration: none;
 	}
 }

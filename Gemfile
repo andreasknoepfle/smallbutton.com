@@ -9,12 +9,16 @@ gem 'haml'
 # Use SCSS for stylesheets
 gem 'sass-rails'
 gem 'sprockets', '2.11.0' #http://stackoverflow.com/questions/22392862/undefined-method-environment-for-nilnilclass-when-importing-bootstrap
+
+# sass libs
+gem 'susy' ,'~> 2.1.1' # Grid framework is susy
+gem 'bourbon' # easy ccs3
+gem 'font-awesome-sass' # icons
+
 group :assets do
-     gem 'susy' ,'~> 2.1.1'
-     gem 'bourbon'
-   
+  
 end
-# Grid framework is susy
+
 
 
 # Use Uglifier as compressor for JavaScript assets
