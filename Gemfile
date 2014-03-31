@@ -14,12 +14,8 @@ gem 'sprockets', '2.11.0' #http://stackoverflow.com/questions/22392862/undefined
 gem 'susy' ,'~> 2.1.1' # Grid framework is susy
 gem 'bourbon' # easy ccs3
 gem 'font-awesome-sass' # icons
-
-group :assets do
-  
-end
-
-
+gem 'sprite-factory'
+gem 'chunky_png'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'

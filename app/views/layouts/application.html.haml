@@ -3,33 +3,31 @@
   %head
     %title smallbutton.com
     = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
+    = stylesheet_link_tag    params[:controller]
     = javascript_include_tag "application", "data-turbolinks-track" => true
     = csrf_meta_tags
   %body
     .header
       .header-inner
         .header-logo
-          %h1
-            %i.fa.fa-book
-            smallbutton.com
+          %a{:href => root_path}
+            %span.sprite_button
+            %h1
+              smallbutton.com
         .header-nav
           %ul
-            %li 
-              %a{:href => "#"} 
-                %i.fa.fa-flask
-                Projects
-            %li 
-              %a{:href => "#"}  
+            %li
+              %a{:href => "#"}
                 %i.fa.fa-code
                 Code
-            %li 
+            %li
               %a{:href => "#"}
                 %i.fa.fa-camera
                 Photos
-            %li 
-              %a{:href => "#"}  
+            %li
+              %a{:href => informations_path}
                 %i.fa.fa-user
-                About 
-              
+                About
+
     .main
       = yield
