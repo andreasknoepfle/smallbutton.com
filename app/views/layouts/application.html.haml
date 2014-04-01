@@ -3,7 +3,7 @@
   %head
     %title smallbutton.com
     = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
-    = stylesheet_link_tag    asset_path("#{params[:controller]}"),"data-turbolinks-track" => true
+    = stylesheet_link_tag    asset_path("controller/#{params[:controller]}.css"),"data-turbolinks-track" => true
     = javascript_include_tag "application", "data-turbolinks-track" => true
     = csrf_meta_tags
   %body
