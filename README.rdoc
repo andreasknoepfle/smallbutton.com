@@ -24,3 +24,9 @@ Code for smallbutton.com
 
   cap production deploy
 
+
+=== Resources
+
+* http://ahrengot.com/web-development/sass-breakpoint-mixin/
+* http://gorails.com/blog/rails-4-0-with-mongodb-and-mongoid
+* http://robmclarty.com/blog/how-to-setup-a-production-server-for-rails-4
