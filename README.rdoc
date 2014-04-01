@@ -2,31 +2,26 @@
 
 Code for smallbutton.com
 
-* Ruby version
-
+=== Ruby version
   2.11
 
-* System dependencies
+=== System dependencies
 
-** MongoDB 
+* MongoDB 
 
   sudo apt-key adv --keyserver keyserver.ubuntu.com --recv 7F0CEB10
   sudo echo "deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen" | tee -a /etc/apt/sources.list.d/10gen.list
   sudo apt-get -y update
   sudo apt-get -y install mongodb-10gen
 
-* Configuration
+=== Configuration
 
-* Database creation
 
-* Database initialization
+=== How to run the test suite
 
-* How to run the test suite
+=== Services (job queues, cache servers, search engines, etc.)
 
-* Services (job queues, cache servers, search engines, etc.)
+=== Deployment instructions
 
-* Deployment instructions
-
-Image Licence:
-http://www.morguefile.com/archive/display/642784
+  cap production deploy
 
