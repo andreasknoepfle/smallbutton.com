@@ -2,21 +2,21 @@
 @import "mixins";
 
 .project {
-  
+
   @include at-breakpoint($bp-tablet) {
     @include span(4 of 12);
-    &:nth-child(3) {
+    &:nth-child(3n) {
       @include omega;
     }
   }
-  
+
   @include between-breakpoints($bp-mobile-horizontal,$bp-tablet) {
     @include span(4 of 8);
-    &:nth-child(2) {
+    &:nth-child(2n) {
       @include omega;
     }
   }
-  
+
   margin-bottom: 1em;
 
 }
