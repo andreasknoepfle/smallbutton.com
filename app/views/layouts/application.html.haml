@@ -3,7 +3,7 @@
   %head
     %title smallbutton.com
     = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
-    = stylesheet_link_tag    params[:controller],"data-turbolinks-track" => true
+    = stylesheet_link_tag    "controller/#{params[:controller]}","data-turbolinks-track" => true
     = javascript_include_tag "application", "data-turbolinks-track" => true
     = csrf_meta_tags
   %body
@@ -29,7 +29,7 @@
                 %a{:href => informations_path}
                   %i.fa.fa-user
                   About
-  
+
       .main
         = yield
     .footer
@@ -40,6 +40,6 @@
           = link_to "https://github.com/andreasknoepfle" do
             %i.fa.fa-github
             Github
-        
-     
-      
+
+
+
