@@ -1,10 +1,22 @@
 @import "susy";
-.project {
+@import "mixins";
 
-  @include span(4 of 12);
-  &:nth-child(3) {
-    @include omega;
+.project {
+  
+  @include at-breakpoint($bp-tablet) {
+    @include span(4 of 12);
+    &:nth-child(3) {
+      @include omega;
+    }
   }
+  
+  @include between-breakpoints($bp-mobile-horizontal,$bp-tablet) {
+    @include span(4 of 8);
+    &:nth-child(2) {
+      @include omega;
+    }
+  }
+  
   margin-bottom: 1em;
 
 }

@@ -1,14 +1,22 @@
 
+@import "mixins";
+
 $primary-color: #2980b9;
 $primary-color-alt: #3498db;
 $secondary-color: #d35400;
 $secondary-color-alt: #e67e22;
 $screen-width: 60em;
 $nav-height: 4em;
+$bp-nav:670px;
+
+html {
+	height: 100%;
+}
 
 body {
 	background: #eee;
 	margin: 0;
+	height: 100%;
 	font-family: 'Open Sans', sans-serif;
 	}
 
@@ -22,9 +30,14 @@ body {
 
 }
 
-.header-logo {
-	@include span(4 of 12);
 
+.header-logo {
+	display:block;
+	@include at-breakpoint($bp-nav) {
+			display:inline-block;
+			float:left;
+		}
+	
 	span {
 	  margin: 2px 0 0;
 	  float:left;
@@ -33,24 +46,28 @@ body {
 	  color: white;
 		font-size: 1.5em;
 		display: inline-block;
-		padding: 0.45em 1em;
+		padding: 0.45em 0.3em;
 		margin:0;
 	}
 }
 
 .header-nav {
-	@include span(8 of 12);
-	@include omega;
 	ul {
-		margin: 0 0;
-		float:right;
+		margin: 0;
+		padding: 0;
+		@include at-breakpoint($bp-nav) {
+			float:right;
+		}
 	}
 	li {
 		display: inline-block;
 		list-style-type: none;
 		margin-left: 0.5em;
 		background: $primary-color;
-
+		@include till-breakpoint($bp-nav) {
+			border-radius:1em;
+			margin-bottom:0.5em;
+		}
 
 	}
 	li:hover {
@@ -59,6 +76,9 @@ body {
 	}
 	a {
 		padding: 1em 1.5em;
+		@include till-breakpoint($bp-nav) {
+			padding: 0.5em;
+		}
 		display:block;
 		color: white;
 		text-decoration: none;
@@ -67,17 +87,37 @@ body {
 
 
 .main {
-  a {
-    color: $secondary-color;
-    text-decoration: none;
-  }
-  a:hover {
-    color: $secondary-color-alt;
-  }
+   @include standard-link;
 }
 
 .main-inner {
-  @include container($screen-width);
-  padding: 1em 1em;
+   @include container($screen-width);
+   padding: 1em 1em;
 
+}
+
+.footer {
+	clear:both;
+	background: white;
+	height: 4em;
+}
+
+.footer-inner {
+	@include container($screen-width);
+	.legal {
+		padding:1em;
+		font-size:0.7em;
+		float:left;
+	}
+	.links {
+		@include standard-link;
+		float: right;
+		padding:1em;
+	}
+}
+.wrapper {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -4em; /* the bottom margin is the negative value of the footer's height */
 }
