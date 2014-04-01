@@ -31,3 +31,4 @@ Code for smallbutton.com
 * http://gorails.com/blog/rails-4-0-with-mongodb-and-mongoid
 * http://robmclarty.com/blog/how-to-setup-a-production-server-for-rails-4
 * http://codeincomplete.com/posts/2011/8/6/sprite_factory_1_4_1/
+* http://www.ericroberts.ca/2013/10/17/building-objects-in-the-session-with-rails-and-wicked-wizard/
