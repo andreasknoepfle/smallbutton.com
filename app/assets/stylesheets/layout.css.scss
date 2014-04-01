@@ -88,18 +88,17 @@ body {
 
 .main {
    @include standard-link;
-   margin-bottom:4em;
+   
 }
 
 .main-inner {
    @include container($screen-width);
    padding: 1em 1em;
-
+   margin-bottom:4em;
 }
 
 .footer {
 	clear:both;
-	
 	background: white;
 	height: 4em;
 }
@@ -117,6 +116,7 @@ body {
 		padding:1em;
 	}
 }
+
 .wrapper {
 	min-height: 100%;
 	height: auto !important;
