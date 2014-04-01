@@ -88,6 +88,7 @@ body {
 
 .main {
    @include standard-link;
+   margin-bottom:4em;
 }
 
 .main-inner {
@@ -98,6 +99,7 @@ body {
 
 .footer {
 	clear:both;
+	
 	background: white;
 	height: 4em;
 }
