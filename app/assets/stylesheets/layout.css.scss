@@ -88,7 +88,7 @@ body {
 
 .main {
    @include standard-link;
-   
+   padding-bottom: 4em; //footer sticky
 }
 
 .main-inner {
@@ -100,6 +100,7 @@ body {
 	clear:both;
 	background: white;
 	height: 4em;
+	margin-top: -4em;
 }
 
 .footer-inner {
@@ -118,7 +119,4 @@ body {
 
 .wrapper {
 	min-height: 100%;
-	height: auto !important;
-	height: 100%;
-	margin: 0 auto -4em; /* the bottom margin is the negative value of the footer's height */
 }
