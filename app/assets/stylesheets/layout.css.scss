@@ -94,7 +94,6 @@ body {
 .main-inner {
    @include container($screen-width);
    padding: 1em 1em;
-   margin-bottom:4em;
 }
 
 .footer {
