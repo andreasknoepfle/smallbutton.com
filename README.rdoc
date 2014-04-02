@@ -34,3 +34,4 @@ Code for smallbutton.com
 * http://www.ericroberts.ca/2013/10/17/building-objects-in-the-session-with-rails-and-wicked-wizard/
 * https://github.com/comfy/active_link_to
 * https://github.com/fixlr/codemirror-rails
+* http://www.cssstickyfooter.com/using-sticky-footer-code.html
