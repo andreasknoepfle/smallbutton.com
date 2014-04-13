@@ -1,13 +1,7 @@
 
 @import "mixins";
 
-$primary-color: #2980b9;
-$primary-color-alt: #3498db;
-$secondary-color: #d35400;
-$secondary-color-alt: #e67e22;
-$screen-width: 60em;
-$nav-height: 4em;
-$bp-nav:670px;
+
 
 html {
 	height: 100%;
@@ -17,11 +11,30 @@ body {
 	background: #eee;
 	margin: 0;
 	height: 100%;
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Montserrat', sans-serif;
+	color: $black;
 	}
+	
+h1 {
+  font-family: 'Clicker Script', cursive;
+	margin:0.2em;
+	font-size:3rem;
+}
+
+h2 {
+  font-size:2rem;
+	font-weight: 400
+}
+
+h3 {
+  font-size:1.5rem;
+	font-weight: 400
+}
 
 .header {
 	background: $primary-color;
+	box-shadow: black 0em 0.1em 0.1em -0.1em;
+	@include transition (width 2.0s ease-in-out);
 }
 
 .header-inner {
@@ -37,18 +50,22 @@ body {
 			display:inline-block;
 			float:left;
 		}
-	
+  
 	span {
 	  margin: 2px 0 0;
 	  float:left;
 	}
 	h1 {
 	  color: white;
-		font-size: 1.5em;
+		font-size: 2em;
 		display: inline-block;
-		padding: 0.45em 0.3em;
+		padding: 0.2em 0.3em;
 		margin:0;
 	}
+	h2 {
+		display:none;
+	}
+	a{display:block;}
 }
 
 .header-nav {
@@ -114,6 +131,9 @@ body {
 		@include standard-link;
 		float: right;
 		padding:1em;
+		a {
+				margin-right:1em;
+		}
 	}
 }
 

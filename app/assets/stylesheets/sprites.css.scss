@@ -2,6 +2,7 @@
 
         Creating a sprite from following images:
         
+        app/assets/images/sprites/button_large.png (150x150)
         app/assets/images/sprites/button.png (50x50)
 
         Output files:
@@ -9,8 +10,9 @@
           app/assets/stylesheets/sprites.css.scss
 
         Output size:
-          50x50
+          200x150
 
 
 */
-span.sprite_button { width: 50px; height: 50px; background: image-url('sprites.png') 0px 0px no-repeat; }
+span.sprite_button_large { width: 150px; height: 150px; background: image-url('sprites.png') 0px 0px no-repeat; }
+span.sprite_button { width: 50px; height: 50px; background: image-url('sprites.png') -150px 0px no-repeat; }

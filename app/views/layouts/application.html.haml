@@ -8,20 +8,20 @@
     = csrf_meta_tags
   %body
     .wrapper
-      .header
+      .header{ :class => "#{"header--big" if @big_header}"}
         .header-inner
           .header-logo
-            %a{:href => root_path}
-              %span.sprite_button
-              %h1
-                smallbutton.com
+            %a{:href => root_path}>
+              %span{ :class => "sprite_button#{"_large" if @big_header}"}
+              %h1 smallbutton.com
+            %h2 yet another code monkeys blog 
           .header-nav
             %ul
               %li
-                %a{:href => "#"}
+                %a{:href => posts_path}
                   %i.fa.fa-code
-                  Code
-              %li
+                  Posts
+              -# %li
                 %a{:href => "#"}
                   %i.fa.fa-camera
                   Photos
@@ -37,6 +37,12 @@
         .legal
           &copy; Copyright 2014 Andreas Knöpfle
         .links
+          = link_to posts_path do
+            %i.fa.fa-code
+            All Posts
+          = link_to informations_path do
+            %i.fa.fa-user
+            About Me
           = link_to "https://github.com/andreasknoepfle" do
             %i.fa.fa-github
             Github

@@ -1,0 +1,50 @@
+@import "mixins";
+
+.header--big {
+    height:4em;
+    @include at-breakpoint($bp-tablet) {
+        height:12em;
+    }
+    .header-logo {
+        h1 {
+            font-size:3em;
+            padding:0;
+        }
+        @include at-breakpoint($bp-tablet) {
+            margin-top: 5.5rem;
+            h1 {
+                font-size:6em;
+                margin-bottom: -1rem;
+            }
+            h2 {
+                font-size:1rem;
+                display:inline-block;
+                padding:0;
+                color:black;
+            }
+        }
+        span {
+            display:none;
+            @include at-breakpoint($bp-tablet) {
+                display:block;
+            }
+        }
+    }
+
+    .header-nav {
+        display:none;
+    }
+}
+
+.main {
+    @include at-breakpoint($bp-tablet) {
+        margin-top: 4em;
+    }
+    @include container($screen-width - 15em);
+}
+
+.teaser{
+    h3 {
+        margin:0;
+    }
+}

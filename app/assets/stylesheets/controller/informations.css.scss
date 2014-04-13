@@ -22,8 +22,7 @@
 }
 
 .project-inner {
-  background: white;
-  padding: 1em;
+  @include whitebox;
 
   img {
     width: 100%;
