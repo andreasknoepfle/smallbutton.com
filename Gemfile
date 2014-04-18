@@ -3,6 +3,15 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.4'
 
+# form library
+gem 'simple_form'
+
+# controller abstraction
+gem 'inherited_resources'
+
+# auth system
+gem 'devise'
+
 # haml templates
 gem 'haml'
 gem "haml-rails"
@@ -53,7 +62,11 @@ group :development do
   gem 'capistrano-bundler'
   gem 'capistrano-rbenv'
   gem 'erb2haml'
+  gem "better_errors"
+  gem "binding_of_caller"
 end
+
+gem "byebug"
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]

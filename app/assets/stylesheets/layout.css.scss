@@ -14,7 +14,6 @@ body {
 	font-family: 'Montserrat', sans-serif;
 	color: $black;
 	}
-	
 h1 {
   font-family: 'Clicker Script', cursive;
 	margin:0.2em;
@@ -50,7 +49,8 @@ h3 {
 			display:inline-block;
 			float:left;
 		}
-  
+
+
 	span {
 	  margin: 2px 0 0;
 	  float:left;
@@ -126,6 +126,12 @@ h3 {
 		padding:1em;
 		font-size:0.7em;
 		float:left;
+	}
+    .user {
+        float:left;
+		padding:1em;
+		font-size:0.5em;
+    	@include standard-link;
 	}
 	.links {
 		@include standard-link;

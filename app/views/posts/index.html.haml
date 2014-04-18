@@ -1,8 +1,6 @@
-.main-inner
+- collection.each do |post|
   .teaser
-    %h3 ruby on rails
-  .teaser
-    %h3 javascript
-  .teaser
-    %h3 personal
+    = link_to post do
+      %h3= post.title
+      %p= post.description
 
