@@ -39,7 +39,7 @@
           &copy; Copyright 2014 Andreas Knöpfle
         .user
           - if user_signed_in?
-            = link_to('(logout)', destroy_user_session_path)
+            = link_to('(logout)', destroy_user_session_path, method: :delete)
           - else
             = link_to('(login)', new_user_session_path)
         .links

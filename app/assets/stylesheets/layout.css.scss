@@ -21,6 +21,7 @@ h1 {
 }
 
 h2 {
+  margin: 0.2em 0;
   font-size:2rem;
 	font-weight: 400
 }
@@ -28,6 +29,10 @@ h2 {
 h3 {
   font-size:1.5rem;
 	font-weight: 400
+}
+
+p {
+  margin-bottom:1em;
 }
 
 .header {
@@ -145,4 +150,16 @@ h3 {
 
 .wrapper {
 	min-height: 100%;
+}
+
+.button {
+  padding: 0.5em;
+  line-height: 2em;
+  border:0;
+  color: white !important;
+  font-family: 'Montserrat', sans-serif;
+  background-color: $secondary-color;
+  &:hover {
+    background-color: $secondary-color-alt;
+  }
 }

@@ -1,2 +1,24 @@
-%h2= resource.title
-%p= resource.description
+.post
+  %h2= resource.title
+  = image_tag(image_post_path(resource))
+  %p= resource.description
+  .fragments
+    - resource.fragments.each do |fragment|
+      .fragment{:id => "fragment_#{fragment.id}"}
+        - begin
+          = render "fragments/type/#{fragment.type}", :fragment => fragment
+        - rescue => e
+          %p{title: e}
+            = fragment.value
+        - if user_signed_in?
+          = link_to "Edit", edit_post_fragment_path(resource,fragment), remote: true
+          = link_to "Delete", post_fragment_path(resource,fragment), method: :delete
+    - if user_signed_in?
+      #new_fragment
+        = link_to "Add Ruby", new_post_fragment_path(resource, fragment: {type: :ruby} ), remote: true
+        = link_to "Add Markdown", new_post_fragment_path(resource, fragment: {type: :markdown} ), remote: true
+%p
+  = link_to "Back", posts_path, class: 'button'
+  - if user_signed_in?
+    = link_to "Edit", edit_post_path(resource), class: 'button'
+    = link_to "Delete", post_path(resource), method: :delete, class: 'button'

@@ -54,3 +54,17 @@ $bp-desktop-wide: 1500px;
   box-shadow: $primary-color 0em 0.1em 0.1em -0.1em;
   padding: 1em;
 }
+
+@mixin grid-with-columns($number) {
+  @include span(1 of $number 0.05);
+  @include grid-children($number);
+}
+
+@mixin grid-children($number) {
+  &:nth-child(#{$number}n) {
+    @include omega;
+  }
+  &:nth-child(#{$number}n+1) {
+    clear:both;
+  }
+}

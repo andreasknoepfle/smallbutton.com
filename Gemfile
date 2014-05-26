@@ -6,6 +6,9 @@ gem 'rails', '4.0.4'
 # form library
 gem 'simple_form'
 
+# editor
+gem 'codemirror-rails'
+
 # controller abstraction
 gem 'inherited_resources'
 
@@ -15,6 +18,10 @@ gem 'devise'
 # haml templates
 gem 'haml'
 gem "haml-rails"
+
+# markdown and highlight
+gem 'redcarpet'
+gem 'coderay'
 
 # Use SCSS for stylesheets
 gem 'sass-rails'
@@ -53,6 +60,12 @@ end
 # mongo db drivers
 gem 'mongoid', '~> 4.0.0.beta1', github: 'mongoid/mongoid'
 gem 'bson_ext'
+
+gem 'mongoid_slug'
+
+gem 'carrierwave'
+gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'
+gem 'rack-gridfs'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

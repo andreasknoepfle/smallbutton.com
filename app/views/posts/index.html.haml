@@ -1,6 +1,9 @@
 - collection.each do |post|
   .teaser
-    = link_to post do
-      %h3= post.title
+    .teaser-inner
+      = link_to post do
+        %h3= post.title
       %p= post.description
-
+- if user_signed_in?
+  .teaser
+    = link_to "New Post", new_post_path, class: 'button'

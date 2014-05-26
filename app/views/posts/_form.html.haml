@@ -1,4 +1,6 @@
-= simple_form_for resource do |form|
-  = form.input :title
-  = form.input :description
-  = form.submit
+= simple_form_for resource, :html => { :multipart => true } do |form|
+  = form.input :image
+  = form.input :title, input_html: {size: 50}
+  = form.input :description,as: :text, input_html: {rows: 10 ,cols: 50}
+  = editing_help
+  = form.submit class: 'button'
