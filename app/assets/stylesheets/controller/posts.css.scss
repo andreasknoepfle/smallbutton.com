@@ -41,28 +41,45 @@
     @include container($screen-width);
 }
 
-.teaser{
-    @include at-breakpoint($bp-tablet) {
-      @include grid-with-columns(2);
-    }
-  
-}
 
 .teaser-inner {
   @include whitebox;
+  @include clearfix;
   margin-bottom: 1em;
   h3 {
-      margin:0;
+      
+      margin: -0.3em 0 0 0;
   }
+}
+
+.teaser-image {
+  float:left;
+  margin-right:1em;
 }
 
 .post {
   @include whitebox;
+  @include clearfix;
   margin-bottom: 1em;
+  > a > img {
+    float:right;
+    padding-left:1em;
+  }
   
+}
+
+.fragment-admin, .post-admin {
+  float:right;
+  padding-left:1em;
 }
 
 .sourcecode .CodeMirror {
     height: auto;
-    margin-bottom: 1em;
+}
+.sourcecode {
+  margin-bottom: 1em;
+  @include clearfix;
+  label {
+    float:right;
   }
+}

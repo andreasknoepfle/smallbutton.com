@@ -1,24 +1,60 @@
 .post
-  %h2= resource.title
-  = image_tag(image_post_path(resource))
-  %p= resource.description
+  - if resource.image.present?
+    = link_to image_post_path(resource) do
+      = image_tag(thumb_post_path(resource))
+  .post-admin
+    - if user_signed_in?
+      = link_to edit_post_path(resource)  do
+        %i.fa.fa-pencil
+      = link_to post_path(resource), method: :delete  do
+        %i.fa.fa-times
+  %h2
+    = resource.title
+  
+  %p
+    :markdown
+      #{resource.description}
   .fragments
     - resource.fragments.each do |fragment|
       .fragment{:id => "fragment_#{fragment.id}"}
+        - if user_signed_in?
+          .fragment-admin
+            = link_to edit_post_fragment_path(resource,fragment), remote: true do
+              %i.fa.fa-pencil
+            = link_to post_fragment_path(resource,fragment), method: :delete do
+              %i.fa.fa-times
+            &nbsp;
         - begin
           = render "fragments/type/#{fragment.type}", :fragment => fragment
         - rescue => e
           %p{title: e}
             = fragment.value
-        - if user_signed_in?
-          = link_to "Edit", edit_post_fragment_path(resource,fragment), remote: true
-          = link_to "Delete", post_fragment_path(resource,fragment), method: :delete
+        
     - if user_signed_in?
       #new_fragment
-        = link_to "Add Ruby", new_post_fragment_path(resource, fragment: {type: :ruby} ), remote: true
-        = link_to "Add Markdown", new_post_fragment_path(resource, fragment: {type: :markdown} ), remote: true
+        #ruby
+          = link_to new_post_fragment_path(resource, fragment: {type: :ruby} ), remote: true  do
+            %i.fa.fa-code
+            Add Ruby
+        #js
+          = link_to new_post_fragment_path(resource, fragment: {type: :javascript} ), remote: true  do
+            %i.fa.fa-code
+            Add JS 
+        #haml
+          = link_to new_post_fragment_path(resource, fragment: {type: :haml} ), remote: true  do
+            %i.fa.fa-code
+            Add HAML 
+        #htmlmixed
+          = link_to new_post_fragment_path(resource, fragment: {type: :htmlmixed} ), remote: true  do
+            %i.fa.fa-code
+            Add HTML 
+        #sass
+          = link_to new_post_fragment_path(resource, fragment: {type: :sass} ), remote: true  do
+            %i.fa.fa-code
+            Add SASS
+        #markdown
+          = link_to new_post_fragment_path(resource, fragment: {type: :markdown} ), remote: true do
+            %i.fa.fa-file-text-o
+            Add Markdown
 %p
   = link_to "Back", posts_path, class: 'button'
-  - if user_signed_in?
-    = link_to "Edit", edit_post_path(resource), class: 'button'
-    = link_to "Delete", post_path(resource), method: :delete, class: 'button'

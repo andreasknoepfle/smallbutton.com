@@ -1,4 +1,4 @@
-$(function() {
+ready = function() {
 	$("textarea.code").each( function() {
 		mode = $(this).data("codemode");
 		CodeMirror.fromTextArea(this, { 
@@ -8,4 +8,7 @@ $(function() {
 	  		readOnly: true
 	  	});
 	});
-});
+};
+
+$(document).ready(ready);
+$(document).on('page:load', ready);
