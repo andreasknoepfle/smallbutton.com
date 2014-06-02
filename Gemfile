@@ -61,7 +61,9 @@ end
 gem 'mongoid', '~> 4.0.0.beta1', github: 'mongoid/mongoid'
 gem 'bson_ext'
 
+#mongoid extensions
 gem 'mongoid_slug'
+gem 'mongoid_orderable'
 
 gem 'carrierwave'
 gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'

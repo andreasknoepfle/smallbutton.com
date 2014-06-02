@@ -8,6 +8,15 @@ ready = function() {
 	  		readOnly: true
 	  	});
 	});
+	
+	$("textarea.editcode").each( function() {
+		mode = $(this).data("codemode");
+		CodeMirror.fromTextArea(this, { 
+	  		lineNumbers: true,
+	  		mode: mode,
+	  		tabSize: 2
+	  	});
+	});
 };
 
 $(document).ready(ready);

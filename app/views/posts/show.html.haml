@@ -15,7 +15,7 @@
     :markdown
       #{resource.description}
   .fragments
-    - resource.fragments.each do |fragment|
+    - resource.fragments.asc(:position).each do |fragment|
       .fragment{:id => "fragment_#{fragment.id}"}
         - if user_signed_in?
           .fragment-admin
@@ -23,6 +23,10 @@
               %i.fa.fa-pencil
             = link_to post_fragment_path(resource,fragment), method: :delete do
               %i.fa.fa-times
+            = link_to post_fragment_path(resource,fragment ,fragment: { move_to: :higher } ), method: :put do
+              %i.fa.fa-chevron-up
+            = link_to post_fragment_path(resource, fragment,fragment: { move_to: :lower } ), method: :put do
+              %i.fa.fa-chevron-down
             &nbsp;
         - begin
           = render "fragments/type/#{fragment.type}", :fragment => fragment

@@ -5,7 +5,7 @@ class FragmentsController < InheritedResources::Base
   
   before_filter :get_post
   belongs_to :post
-  
+    
   private 
     def get_post
       @post = Post.find params[:post_id]
@@ -16,7 +16,7 @@ class FragmentsController < InheritedResources::Base
     end
      
     def permitted_params
-      params.permit( :fragment => [:value, :caption, :type] )
+      params.permit( :fragment => [:value, :caption, :type, :move_to] )
     end
   
 end
