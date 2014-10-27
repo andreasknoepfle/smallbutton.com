@@ -1,0 +1,36 @@
+ .heading {
+   //background-image: linear-gradient(to bottom,#E74C3C 0,#F75C4C 100%);
+   background-color: #F1C40F;
+   color: #2C3E50;
+ }
+
+.jumbotron {
+  text-align: center;
+
+  h1 { font-family: 'Fredericka the Great', cursive; color: #2C3E50; letter-spacing: 0.1em;
+       text-shadow: 0px 0px 5px #F39C12;  }
+}
+.navbar { .sprite_button {float:left;}}
+
+svg.logo {
+  circle.outline {
+    stroke: #2C3E50;
+    stroke-width: 5;
+    fill: none;
+  }
+  circle.outline--inner {
+    fill:  #F39C12
+  }
+  circle.outline--outer {
+    fill: darken(#F39C12,10%)
+  }
+
+  circle.hole {
+    fill: #F1C40F;
+  }
+  line.cross {
+    stroke: #2C3E50;
+    stroke-width: 10;
+    stroke-linecap: round;
+  }
+}

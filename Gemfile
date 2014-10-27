@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.4'
+gem 'rails', '4.1.1'
 
 # form library
 gem 'simple_form'
@@ -9,8 +9,10 @@ gem 'simple_form'
 # editor
 gem 'codemirror-rails'
 
-# controller abstraction
-gem 'inherited_resources'
+# controller responders
+gem 'responders'
+gem 'arcane'
+gem 'pundit'
 
 # auth system
 gem 'devise'
@@ -25,11 +27,11 @@ gem 'coderay'
 
 # Use SCSS for stylesheets
 gem 'sass-rails'
-gem 'sprockets', '2.11.0' #http://stackoverflow.com/questions/22392862/undefined-method-environment-for-nilnilclass-when-importing-bootstrap
+gem 'bootstrap-sass'
+gem 'bootswatch-rails'
 
 # sass libs
-gem 'susy' ,'~> 2.1.1' # Grid framework is susy
-gem 'bourbon' # easy ccs3
+
 gem 'font-awesome-sass' # icons
 gem 'sprite-factory'
 gem 'chunky_png'

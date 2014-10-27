@@ -10,7 +10,6 @@ SmallbuttonCom::Application.routes.draw do
   resources :informations, :only => [:index]
   resources :posts do
     get :image, on: :member
-    get :thumb, on: :member
     resources :fragments, :except => [:show,:index]
   end
 

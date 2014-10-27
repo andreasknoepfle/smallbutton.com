@@ -3,36 +3,31 @@
   %head
     %title smallbutton.com
     = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
-    = stylesheet_link_tag    asset_path("controller/#{params[:controller]}.css"),"data-turbolinks-track" => true
     = javascript_include_tag "application", "data-turbolinks-track" => true
     = csrf_meta_tags
   %body
-    .wrapper
-      .header{ :class => "#{"header--big" if @big_header}"}
-        .header-inner
-          .header-logo
-            %a{:href => root_path}>
-              %span{ :class => "sprite_button#{"_large" if @big_header}"}
-              %h1 smallbutton.com
-            %h2 yet another code monkeys blog 
-          .header-nav
-            %ul
-              %li
-                %a{:href => posts_path}
-                  %i.fa.fa-code
-                  Posts
-              -# %li
-                %a{:href => "#"}
-                  %i.fa.fa-camera
-                  Photos
-              %li
-                %a{:href => informations_path}
-                  %i.fa.fa-user
-                  About
+    .navbar.navbar-default.navbar-fixed-top
+      .container
+        .navbar-header
+          %a.navbar-brand{href: root_path}
+            smallbutton.com
+          %button.navbar-toggle{"data-target" => "#navbar-main", "data-toggle" => "collapse", :type => "button"}
+            %span.icon-bar
+            %span.icon-bar
+            %span.icon-bar
+        #navbar-main.navbar-collapse.collapse
+          %ul.nav.navbar-nav.navbar-right
+            %li
+              %a{:href => posts_path}
+                %i.fa.fa-code
+                TIMELINE
+            %li
+              %a{:href => informations_path}
+                %i.fa.fa-user
+                ABOUT
 
-      .main
-        .main-inner
-          = yield
+
+    = yield
     .footer
       .footer-inner
         .legal
@@ -52,6 +47,3 @@
           = link_to "https://github.com/andreasknoepfle" do
             %i.fa.fa-github
             Github
-
-
-

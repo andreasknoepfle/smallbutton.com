@@ -1,13 +1,20 @@
-- collection.each do |post|
-  .teaser
-    .teaser-inner
-      - if post.image.present?
-        .teaser-image
-          = link_to post do
-            = image_tag(thumb_post_path(post))
-      = link_to post do
-        %h3= post.title
-      = truncate(post.description, length: 300, separator: ' ') { link_to " (more)", post }
-- if user_signed_in?
-  .teaser
-    = link_to "New Post", new_post_path, class: 'button'
+.heading.jumbotron
+  .container
+    = render "/informations/logo", size: 200
+    %h1 smallbutton.com
+    %h2 yet another code monkeys blog
+
+.container
+  - @posts.each do |post|
+    .teaser
+      .teaser-inner
+        - if post.image.present?
+          .teaser-image
+            = link_to post do
+              = image_tag(image_post_path(post, style: :thumb))
+        = link_to post do
+          %h3= post.title
+        = truncate(post.description, length: 300, separator: ' ') { link_to " (more)", post }
+  - if user_signed_in?
+    .teaser
+      = link_to "New Post", new_post_path, class: 'button'

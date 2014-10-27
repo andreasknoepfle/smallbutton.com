@@ -1,22 +1,47 @@
-class FragmentsController < InheritedResources::Base
+class FragmentsController < ApplicationController
+  
   before_action :authenticate_user! 
-  actions :all, except: [:show,:index]
+  responders :flash, :location
   respond_to :js
   
-  before_filter :get_post
-  belongs_to :post
+  before_filter :set_post
+  before_filter :set_fragment , only: [:edit,:update,:destroy]
+    
+  def new
+    @fragment = @post.fragments.build params.for(Fragment).refine
+    authorize @fragment 
+  end
+    
+  def create
+    @fragment = @post.fragments.build params.for(Fragment).refine
+    authorize @fragment
+    @fragment.save
+    respond_with @fragment, :location => post_path(@post)
+  end
+    
+  def edit
+    authorize @fragment
+  end
+    
+  def update
+    authorize @fragment
+    @fragment.update params.for(@fragment).refine
+    respond_with  @fragment, :location => post_path(@post)
+  end
+      
+  def destroy
+    authorize @fragment
+    @fragment.destroy!
+    respond_with @fragment, :location => post_path(@post)
+  end
     
   private 
-    def get_post
+    def set_post
       @post = Post.find params[:post_id]
     end
-    
-    def begin_of_association_chain
-      @post
-    end
-     
-    def permitted_params
-      params.permit( :fragment => [:value, :caption, :type, :move_to] )
+      
+    def set_fragment
+      @fragment = Fragment.find params[:id]
     end
   
 end

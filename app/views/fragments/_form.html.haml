@@ -1,8 +1,8 @@
 
-= simple_form_for [@post,resource] do |form|
+= simple_form_for [@post,@fragment] do |form|
   = form.input :type, as: :hidden
   = form.input :caption, input_html: {size: 50}
-  - case resource.type.to_sym
+  - case @fragment.type.to_sym
   - when :markdown, :ruby, :javascript, :haml, :sass, :htmlmixed
     = form.input :value, as: :text, input_html: {rows: 10 ,cols: 50}
     = editing_help

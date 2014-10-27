@@ -1,5 +1,5 @@
 :plain
-  $('#fragment_#{resource.id}').html("#{ j( render "form") }");
-  $('#fragment_#{resource.id} #fragment_value').each(function() { 
+  $('#fragment_#{@fragment.id}').html("#{ j( render "form") }");
+  $('#fragment_#{@fragment.id} #fragment_value').each(function() { 
     #{ render "codemirror"}
   }) 

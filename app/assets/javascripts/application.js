@@ -12,13 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require bootstrap-sprockets
 //= require turbolinks
-//= require codemirror
-//= require codemirror/modes/ruby
-//= require codemirror/modes/markdown
-//= require codemirror/modes/javascript
-//= require codemirror/modes/xml
-//= require codemirror/modes/haml
-//= require codemirror/modes/htmlmixed
-//= require codemirror/modes/sass
 //= require_tree .
