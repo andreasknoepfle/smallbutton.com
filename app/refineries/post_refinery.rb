@@ -1,7 +1,7 @@
 class PostRefinery < ApplicationRefinery
 
   def create
-      [:title,:description, :image]
+      [:title, :description, :content, :image, :published]
   end
 
   def update

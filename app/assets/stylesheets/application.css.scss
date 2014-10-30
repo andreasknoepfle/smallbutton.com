@@ -11,7 +11,6 @@
  *= require_self
  */
 
-@import "font-awesome";
 
 @import url(http://fonts.googleapis.com/css?family=Fredericka+the+Great|Montserrat:700,400);
 
@@ -20,18 +19,24 @@ $brand-success:   #C0392B;
 
 $navbar-default-link-hover-color: #DCE0E1;
 $navbar-height: 60px;
-$container-desktop: 800px;
-$container-large-desktop:  940px;
+
 $body-bg:  #ECF0F1;
 $font-family-sans-serif:  "Montserrat", "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
 
+
+
+
 @import "bootswatch/flatly/variables";
+@import "bootstrap-sprockets";
 @import "bootstrap";
 // Bootstrap body padding for fixed navbar
 body { padding-top: 60px; }
 
 // And finally bootswatch style itself
 @import "bootswatch/flatly/bootswatch";
+@import "font-awesome";
 
 // Whatever application styles you have go last
 @import "base";
+@import "timeline";
+@import "monokai";

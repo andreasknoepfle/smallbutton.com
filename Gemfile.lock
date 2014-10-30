@@ -1,37 +1,37 @@
 GIT
   remote: git://github.com/mongoid/mongoid.git
-  revision: 1fcb8721b0222ad4de7677f69fbf543a3f75b5f4
+  revision: f4f489e45adb0059fae6854d8a29ebb79cc6c8fd
   specs:
-    mongoid (4.0.0.rc2)
+    mongoid (4.0.0)
       activemodel (~> 4.0)
-      moped (~> 2.0.0.rc2)
+      moped (~> 2.0.0)
       origin (~> 2.1)
       tzinfo (>= 0.3.37)
 
 GEM
   remote: https://rubygems.org/
   specs:
-    actionmailer (4.1.1)
-      actionpack (= 4.1.1)
-      actionview (= 4.1.1)
-      mail (~> 2.5.4)
-    actionpack (4.1.1)
-      actionview (= 4.1.1)
-      activesupport (= 4.1.1)
+    actionmailer (4.1.6)
+      actionpack (= 4.1.6)
+      actionview (= 4.1.6)
+      mail (~> 2.5, >= 2.5.4)
+    actionpack (4.1.6)
+      actionview (= 4.1.6)
+      activesupport (= 4.1.6)
       rack (~> 1.5.2)
       rack-test (~> 0.6.2)
-    actionview (4.1.1)
-      activesupport (= 4.1.1)
+    actionview (4.1.6)
+      activesupport (= 4.1.6)
       builder (~> 3.1)
       erubis (~> 2.7.0)
-    activemodel (4.1.1)
-      activesupport (= 4.1.1)
+    activemodel (4.1.6)
+      activesupport (= 4.1.6)
       builder (~> 3.1)
-    activerecord (4.1.1)
-      activemodel (= 4.1.1)
-      activesupport (= 4.1.1)
+    activerecord (4.1.6)
+      activemodel (= 4.1.6)
+      activesupport (= 4.1.6)
       arel (~> 5.0.0)
-    activesupport (4.1.1)
+    activesupport (4.1.6)
       i18n (~> 0.6, >= 0.6.9)
       json (~> 1.7, >= 1.7.7)
       minitest (~> 5.1)
@@ -41,28 +41,32 @@ GEM
       actionpack (>= 3.0.0, < 5.0.0)
       activesupport (>= 3.0.0, < 5.0.0)
     arel (5.0.1.20140414130214)
-    bcrypt (3.1.7)
-    better_errors (1.1.0)
+    autoprefixer-rails (3.1.2.20141016)
+      execjs
+    bcrypt (3.1.9)
+    better_errors (2.0.0)
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
+      rack (>= 0.9.0)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
-    bootstrap-sass (3.2.0.2)
+    bootstrap-sass (3.3.0.1)
       sass (~> 3.2)
     bootswatch-rails (3.2.4)
       railties (>= 3.1)
     bson (2.3.0)
     bson_ext (1.5.1)
     builder (3.2.2)
-    byebug (3.1.2)
+    byebug (3.5.1)
       columnize (~> 0.8)
       debugger-linecache (~> 1.2)
+      slop (~> 3.6)
     capistrano (3.2.1)
       i18n
       rake (>= 10.0.0)
       sshkit (~> 1.3)
-    capistrano-bundler (1.1.2)
-      capistrano (~> 3.0)
+    capistrano-bundler (1.1.3)
+      capistrano (~> 3.1)
       sshkit (~> 1.2)
     capistrano-rails (1.0.0)
       capistrano
@@ -78,34 +82,35 @@ GEM
       carrierwave (>= 0.8.0, < 0.11.0)
       mongoid (>= 3.0, < 5.0)
       mongoid-grid_fs (>= 1.3, < 3.0)
-    chunky_png (1.3.1)
-    codemirror-rails (4.2)
-      railties (>= 3.0, < 5)
+    chunky_png (1.3.3)
+    ckeditor_rails (4.4.3)
+      railties (>= 3.0)
     coderay (1.1.0)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.0)
-    coffee-script (2.2.0)
+    coffee-script (2.3.0)
       coffee-script-source
       execjs
-    coffee-script-source (1.7.0)
+    coffee-script-source (1.8.0)
     colorize (0.7.3)
     columnize (0.8.9)
     connection_pool (2.0.0)
     debug_inspector (0.0.2)
     debugger-linecache (1.2.0)
-    devise (3.2.4)
+    devise (3.4.1)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
       railties (>= 3.2.6, < 5)
+      responders
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
     erb2haml (0.1.5)
       html2haml
     erubis (2.7.0)
-    execjs (2.2.0)
-    font-awesome-sass (4.1.0)
-      sass (~> 3.2)
+    execjs (2.2.2)
+    font-awesome-rails (4.2.0.0)
+      railties (>= 3.2, < 5.0)
     haml (4.1.0.beta.1)
       tilt
     haml-rails (0.5.3)
@@ -120,22 +125,25 @@ GEM
       haml (>= 4.0.0.rc.1)
       hpricot (~> 0.8.6)
       ruby_parser (~> 3.1.1)
-    i18n (0.6.9)
+    i18n (0.6.11)
     jbuilder (1.5.3)
       activesupport (>= 3.0.0)
       multi_json (>= 1.2.0)
-    jquery-rails (3.1.0)
+    jquery-rails (3.1.2)
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
+    jquery-turbolinks (2.1.0)
+      railties (>= 3.1.0)
+      turbolinks
     json (1.8.1)
-    libv8 (3.16.14.3)
-    mail (2.5.4)
-      mime-types (~> 1.16)
-      treetop (~> 1.4.8)
-    mime-types (1.25.1)
-    mini_magick (3.7.0)
+    libv8 (3.16.14.7)
+    mail (2.6.1)
+      mime-types (>= 1.16, < 3)
+    mime-types (2.4.3)
+    mini_magick (3.8.1)
       subexec (~> 0.2.1)
-    minitest (5.3.5)
+    minitest (5.4.2)
+    modernizr-rails (2.7.1)
     mongo (1.3.1)
       bson (>= 1.3.1)
     mongoid-grid_fs (2.1.0)
@@ -146,7 +154,7 @@ GEM
     mongoid_slug (3.2.1)
       mongoid (> 3.0)
       stringex (~> 2.0)
-    moped (2.0.0.rc2)
+    moped (2.0.1)
       bson (~> 2.2)
       connection_pool (~> 2.0)
       optionable (~> 0.2.0)
@@ -157,8 +165,7 @@ GEM
     optionable (0.2.0)
     origin (2.1.1)
     orm_adapter (0.5.0)
-    polyglot (0.3.5)
-    pundit (0.2.3)
+    pundit (0.3.0)
       activesupport (>= 3.0.0)
     rack (1.5.2)
     rack-gridfs (0.4.1)
@@ -167,52 +174,54 @@ GEM
       rack
     rack-test (0.6.2)
       rack (>= 1.0)
-    rails (4.1.1)
-      actionmailer (= 4.1.1)
-      actionpack (= 4.1.1)
-      actionview (= 4.1.1)
-      activemodel (= 4.1.1)
-      activerecord (= 4.1.1)
-      activesupport (= 4.1.1)
+    rails (4.1.6)
+      actionmailer (= 4.1.6)
+      actionpack (= 4.1.6)
+      actionview (= 4.1.6)
+      activemodel (= 4.1.6)
+      activerecord (= 4.1.6)
+      activesupport (= 4.1.6)
       bundler (>= 1.3.0, < 2.0)
-      railties (= 4.1.1)
+      railties (= 4.1.6)
       sprockets-rails (~> 2.0)
-    railties (4.1.1)
-      actionpack (= 4.1.1)
-      activesupport (= 4.1.1)
+    railties (4.1.6)
+      actionpack (= 4.1.6)
+      activesupport (= 4.1.6)
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
     rake (10.3.2)
-    rdoc (4.1.1)
+    rdoc (4.1.2)
       json (~> 1.4)
-    redcarpet (3.1.2)
+    redcarpet (3.2.0)
     ref (1.0.5)
-    responders (1.1.0)
-      railties (>= 3.2, < 5)
+    responders (1.1.1)
+      railties (>= 3.2, < 4.2)
     ruby_parser (3.1.3)
       sexp_processor (~> 4.1)
-    sass (3.3.8)
-    sass-rails (4.0.1)
+    sass (3.4.5)
+    sass-rails (5.0.0.beta1)
       railties (>= 4.0.0, < 5.0)
-      sass (>= 3.1.10)
-      sprockets-rails (~> 2.0.0)
-    sdoc (0.4.0)
-      json (~> 1.8)
-      rdoc (~> 4.0, < 5.0)
-    sexp_processor (4.4.3)
-    simple_form (3.0.2)
+      sass (~> 3.2)
+      sprockets (~> 2.12)
+      sprockets-rails (>= 2.0, < 4.0)
+    sdoc (0.4.1)
+      json (~> 1.7, >= 1.7.7)
+      rdoc (~> 4.0)
+    sexp_processor (4.4.4)
+    simple_form (3.1.0.rc2)
       actionpack (~> 4.0)
       activemodel (~> 4.0)
-    sprite-factory (1.6.0)
-    sprockets (2.11.0)
+    slop (3.6.0)
+    sprite-factory (1.6.1)
+    sprockets (2.12.2)
       hike (~> 1.2)
       multi_json (~> 1.0)
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
-    sprockets-rails (2.0.1)
+    sprockets-rails (2.2.0)
       actionpack (>= 3.0)
       activesupport (>= 3.0)
-      sprockets (~> 2.8)
+      sprockets (>= 2.8, < 4.0)
     sshkit (1.5.1)
       colorize
       net-scp (>= 1.1.2)
@@ -225,14 +234,11 @@ GEM
     thor (0.19.1)
     thread_safe (0.3.4)
     tilt (1.4.1)
-    treetop (1.4.15)
-      polyglot
-      polyglot (>= 0.3.1)
-    turbolinks (2.2.2)
+    turbolinks (2.5.1)
       coffee-rails
-    tzinfo (1.2.1)
+    tzinfo (1.2.2)
       thread_safe (~> 0.1)
-    uglifier (2.5.1)
+    uglifier (2.5.3)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
     warden (1.2.3)
@@ -243,6 +249,7 @@ PLATFORMS
 
 DEPENDENCIES
   arcane
+  autoprefixer-rails
   better_errors
   binding_of_caller
   bootstrap-sass
@@ -255,28 +262,30 @@ DEPENDENCIES
   carrierwave
   carrierwave-mongoid
   chunky_png
-  codemirror-rails
-  coderay
+  ckeditor_rails
   coffee-rails (~> 4.0.0)
   devise
   erb2haml
-  font-awesome-sass
+  font-awesome-rails
   haml
   haml-rails
   jbuilder (~> 1.2)
   jquery-rails
+  jquery-turbolinks
   mini_magick
+  modernizr-rails
   mongoid (~> 4.0.0.beta1)!
   mongoid_orderable
   mongoid_slug
   pundit
   rack-gridfs
-  rails (= 4.1.1)
+  rails (= 4.1.6)
   redcarpet
   responders
-  sass-rails
+  sass (= 3.4.5)
+  sass-rails (~> 5.0.0.beta1)
   sdoc
-  simple_form
+  simple_form (>= 3.1.0.rc1)
   sprite-factory
   therubyracer
   turbolinks

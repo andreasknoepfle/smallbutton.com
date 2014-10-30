@@ -23,16 +23,15 @@ module SmallbuttonCom
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
-  config.generators.orm = :mongoid
-  config.middleware.insert_after Rack::Runtime, Rack::GridFS,
-    :prefix => 'uploads',
-    :lookup => :path,
-    :database => "smallbutton_com_grid_#{Rails.env}"
-  
-	config.filter_parameters += [:password, :password_confirmation]
+    config.generators.orm = :mongoid
+    config.middleware.insert_after Rack::Runtime, Rack::GridFS,
+      :prefix => 'uploads',
+      :lookup => :path,
+      :database => "smallbutton_com_grid_#{Rails.env}"
 
-    # controller based assets
-    config.assets.precompile += Dir["app/assets/stylesheets/controller/*.scss"].map{|file| "controller/#{File.basename file,'.scss'}" }
-    config.generators.assets :controller_based_assets
+  	config.filter_parameters += [:password, :password_confirmation]
+
+    config.sass.unix_newlines = true
+
   end
 end

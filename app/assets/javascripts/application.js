@@ -11,7 +11,11 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery.turbolinks
 //= require jquery_ujs
 //= require bootstrap-sprockets
 //= require turbolinks
-//= require_tree .
+//= require ckeditor-jquery
+//= require posts
+//= require highlight.pack
+//= require modernizr

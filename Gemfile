@@ -1,18 +1,16 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.1.1'
+gem 'rails', '4.1.6'
 
 # form library
-gem 'simple_form'
-
-# editor
-gem 'codemirror-rails'
+gem 'simple_form', ">= 3.1.0.rc1"
 
 # controller responders
 gem 'responders'
 gem 'arcane'
 gem 'pundit'
+gem 'modernizr-rails'
 
 # auth system
 gem 'devise'
@@ -23,16 +21,17 @@ gem "haml-rails"
 
 # markdown and highlight
 gem 'redcarpet'
-gem 'coderay'
 
 # Use SCSS for stylesheets
-gem 'sass-rails'
 gem 'bootstrap-sass'
 gem 'bootswatch-rails'
-
+gem 'autoprefixer-rails'
+gem 'ckeditor_rails'
+gem 'sass-rails', '~> 5.0.0.beta1'
+gem 'sass', '3.4.5'
 # sass libs
 
-gem 'font-awesome-sass' # icons
+gem 'font-awesome-rails' # icons
 gem 'sprite-factory'
 gem 'chunky_png'
 
@@ -50,6 +49,7 @@ gem 'jquery-rails'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
+gem 'jquery-turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'

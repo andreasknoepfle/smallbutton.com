@@ -10,7 +10,6 @@
       .container
         .navbar-header
           %a.navbar-brand{href: root_path}
-            smallbutton.com
           %button.navbar-toggle{"data-target" => "#navbar-main", "data-toggle" => "collapse", :type => "button"}
             %span.icon-bar
             %span.icon-bar
@@ -26,24 +25,16 @@
                 %i.fa.fa-user
                 ABOUT
 
-
+    .heading{ class: "#{@big_header ? 'jumbotron' : '' }" }
+      .container
+        = yield :header
     = yield
     .footer
-      .footer-inner
-        .legal
+      .container
+        %p.text-muted
           &copy; Copyright 2014 Andreas Knöpfle
-        .user
+
           - if user_signed_in?
             = link_to('(logout)', destroy_user_session_path, method: :delete)
           - else
             = link_to('(login)', new_user_session_path)
-        .links
-          = link_to posts_path do
-            %i.fa.fa-code
-            All Posts
-          = link_to informations_path do
-            %i.fa.fa-user
-            About Me
-          = link_to "https://github.com/andreasknoepfle" do
-            %i.fa.fa-github
-            Github

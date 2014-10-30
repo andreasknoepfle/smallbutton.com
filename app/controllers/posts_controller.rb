@@ -4,15 +4,16 @@ class PostsController < ApplicationController
   respond_to :html
 
   before_action :authenticate_user! , except: [:index,:show,:image,:thumb]
-  before_filter :set_post, only: [:show, :edit, :update, :destory, :image]
+  before_filter :set_post, only: [:show, :edit, :update, :destroy, :image]
   before_filter :set_big_header, only: [:index]
 
   def index
-    @posts = policy_scope(Post)
+    @posts = policy_scope(Post).desc(:created_at)
   end
 
   def show
     authorize @post
+    @other_posts = policy_scope(Post).limit 5
   end
 
   def new
@@ -37,8 +38,15 @@ class PostsController < ApplicationController
     respond_with @post
   end
 
+  def destroy
+    authorize @post
+    @post.destroy
+    respond_with @post
+  end
+
   def image
-    case params[:style].to_sym
+    style = params[:style].to_sym rescue nil
+    case style
     when :thumb
       render_image @post.image.thumb.read
     else

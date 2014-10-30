@@ -2,13 +2,15 @@ class Post
   include Mongoid::Document
   include Mongoid::Slug
   include Mongoid::Timestamps
-  
+
   slug :title
   field :title, type: String
-  field :description, type: String
+  field :description
+  field :content, type: String
   field :published, type: Boolean
   field :published_at, type: DateTime
-  
-  embeds_many :fragments
+
+  validates :title, :description, :content, presence: true
+
   mount_uploader :image, ImageUploader
 end

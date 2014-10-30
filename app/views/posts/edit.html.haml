@@ -1,1 +1,4 @@
-= render "form"
+= content_for :header do
+  %h1 Edit
+.container
+  = render "form"
