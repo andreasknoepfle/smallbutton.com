@@ -1,0 +1,16 @@
+.cd-timeline-block.post_item
+  .cd-timeline-img.cd-picture
+    - if post.image.present?
+      = image_tag(image_post_path(post, style: :thumb))
+    - else
+      = render "informations/logo", size: 60
+  .cd-timeline-content
+    = link_to post do
+      %h2= post.title
+    %p
+      = post.description
+    = link_to post, class: 'cd-read-more' do
+      Read more
+    %span.cd-date
+      = time_ago_in_words post.created_at
+      ago
