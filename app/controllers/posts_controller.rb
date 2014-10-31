@@ -8,7 +8,10 @@ class PostsController < ApplicationController
   before_filter :set_big_header, only: [:index]
 
   def index
-    @posts = policy_scope(Post).desc(:created_at)
+    @posts = policy_scope(Post).desc(:created_at).page(params[:page]).per(10)
+    if request.xhr?
+      render :partial => @posts
+    end
   end
 
   def show

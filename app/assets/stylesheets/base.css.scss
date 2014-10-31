@@ -2,15 +2,40 @@
    //background-image: linear-gradient(to bottom,#E74C3C 0,#F75C4C 100%);
    background-color: #F1C40F;
    color: #2C3E50;
-   margin-bottom: 1em;
+   h1 { margin-top: 0;}
  }
 
 .jumbotron {
   text-align: center;
-  margin-bottom: 3em;
+  margin-bottom: 0;
   h1 {  color: #2C3E50; letter-spacing: 0.05em;  }
 }
-.navbar { .sprite_button {float:left;}}
+
+.white {
+  background-color: white;
+  }
+
+.spacer {
+  padding: 2em;
+}
+
+.img-spacer {
+  display: inline-block;
+  padding: 0 0em 0.1em 1em;
+}
+
+.description {
+  font-size: 1.3em;
+  margin-bottom: 1em;
+}
+
+.admin {
+  a { color: #b4bcc2; }
+}
+
+pre {
+  padding: 0;
+}
 
 svg.logo {
   vertical-align: middle;
@@ -45,7 +70,7 @@ html {
 }
 body {
   /* Margin bottom by footer height */
-  margin-bottom: 100px;
+  margin-bottom: 80px;
 }
 .footer {
   position: absolute;
@@ -58,8 +83,4 @@ body {
 
 .container .text-muted {
   margin: 30px 0;
-}
-
-.post {
-  background-color: #f5f5f5;
 }

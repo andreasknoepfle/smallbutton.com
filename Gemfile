@@ -11,6 +11,7 @@ gem 'responders'
 gem 'arcane'
 gem 'pundit'
 gem 'modernizr-rails'
+gem 'kaminari'
 
 # auth system
 gem 'devise'
@@ -26,7 +27,7 @@ gem 'redcarpet'
 gem 'bootstrap-sass'
 gem 'bootswatch-rails'
 gem 'autoprefixer-rails'
-gem 'ckeditor_rails'
+gem 'ckeditor'
 gem 'sass-rails', '~> 5.0.0.beta1'
 gem 'sass', '3.4.5'
 # sass libs
@@ -60,12 +61,11 @@ group :doc do
 end
 
 # mongo db drivers
-gem 'mongoid', '~> 4.0.0.beta1', github: 'mongoid/mongoid'
-gem 'bson_ext'
+gem 'mongoid', "~> 4.0.0"
 
 #mongoid extensions
 gem 'mongoid_slug'
-gem 'mongoid_orderable'
+gem 'spaghetti'
 
 gem 'carrierwave'
 gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'
@@ -82,6 +82,7 @@ group :development do
   gem 'erb2haml'
   gem "better_errors"
   gem "binding_of_caller"
+  gem "thin"
 end
 
 gem "byebug"

@@ -1,6 +1,4 @@
 $ ->
-  $('.ckeditor').ckeditor( extraPlugins: 'dialogui,dialog,clipboard,widget,lineutils,codesnippet', uiColor: '#ECF0F1', height: '600px')
-
 
   $('pre code').each (i, block) ->
     hljs.highlightBlock(block)

@@ -1,34 +1,39 @@
-.container
-  .row
-    .col-md-9
-      - if user_signed_in?
+.container.heading
+  .spacer
+    %h1= @post.title
+    - if user_signed_in?
+      .btn-group
+        = link_to edit_post_path(@post), class: 'btn btn-primary' do
+          %i.fa.fa-pencil>
+        = link_to post_path(@post), method: :delete, class: 'btn btn-danger' do
+          %i.fa.fa-times>
+.container.white
+  .spacer
+    .row
+      .col-md-9
         .pull-right
-          .btn-group
-            = link_to edit_post_path(@post), class: 'btn btn-primary' do
-              %i.fa.fa-pencil>
-            = link_to post_path(@post), method: :delete, class: 'btn btn-danger' do
-              %i.fa.fa-times>
-      .media
-        - if @post.image.present?
-          = link_to image_post_path(@post), class: "media-left" do
-            = image_tag(image_post_path(@post, style: 'thumb'), class: "img-rounded")
-        .media-body
-          %h1.media-heading= @post.title
-          %p= @post.description
+          - if @post.image.present?
+            = link_to image_post_path(@post), class: "img-spacer" do
+              = image_tag(image_post_path(@post), class: "img-thumbnail")
+        by Andreas Knöpfle
+        = time_ago_in_words @post.created_at
+        ago
+        %hr
+        .description
 
-
-
-
-      = raw @post.content
-      = link_to "Back", posts_path, class: 'btn btn-default', role: "button"
-    .col-md-3
-      - @other_posts.each do |post|
+          = @post.description
         .post
-          - if post.image.present?
-            .image.pull-right
-              = link_to post do
-                = image_tag(image_post_path(post, style: :thumb))
-          = link_to post do
-            %h3= post.title
-            %p= post.description
-          .clearfix
+          = raw @post.content
+
+        = link_to "Back", posts_path, class: 'btn btn-default', role: "button"
+      .col-md-3
+        - @other_posts.each do |post|
+          .post
+            - if post.image.present?
+              .image.pull-right
+                = link_to post do
+                  = image_tag(image_post_path(post, style: :thumb))
+            = link_to post do
+              %h3= post.title
+              %p= post.description
+            .clearfix

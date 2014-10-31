@@ -4,12 +4,15 @@
     %title smallbutton.com
     = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
     = javascript_include_tag "application", "data-turbolinks-track" => true
+    %link{rel:"stylesheet", href:"/favicon.ico" }
     = csrf_meta_tags
   %body
     .navbar.navbar-default.navbar-fixed-top
       .container
         .navbar-header
           %a.navbar-brand{href: root_path}
+            = render "informations/logo", size: 25
+            smallbutton.com
           %button.navbar-toggle{"data-target" => "#navbar-main", "data-toggle" => "collapse", :type => "button"}
             %span.icon-bar
             %span.icon-bar
@@ -17,24 +20,19 @@
         #navbar-main.navbar-collapse.collapse
           %ul.nav.navbar-nav.navbar-right
             %li
-              %a{:href => posts_path}
-                %i.fa.fa-code
-                TIMELINE
-            %li
               %a{:href => informations_path}
                 %i.fa.fa-user
                 ABOUT
 
-    .heading{ class: "#{@big_header ? 'jumbotron' : '' }" }
-      .container
-        = yield :header
     = yield
     .footer
       .container
         %p.text-muted
           &copy; Copyright 2014 Andreas Knöpfle
-
-          - if user_signed_in?
-            = link_to('(logout)', destroy_user_session_path, method: :delete)
-          - else
-            = link_to('(login)', new_user_session_path)
+          %span.pull-right.admin
+            - if user_signed_in?
+              = link_to destroy_user_session_path, method: :delete do
+                %i.fa.fa-lock
+            - else
+              = link_to new_user_session_path do
+                %i.fa.fa-unlock

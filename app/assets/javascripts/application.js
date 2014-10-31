@@ -15,7 +15,8 @@
 //= require jquery_ujs
 //= require bootstrap-sprockets
 //= require turbolinks
-//= require ckeditor-jquery
+//= require ckeditor/init
 //= require posts
 //= require highlight.pack
 //= require modernizr
+//= require jquery.pageless

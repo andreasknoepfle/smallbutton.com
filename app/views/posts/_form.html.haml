@@ -3,6 +3,5 @@
   = form.input :title, input_html: {size: 50}
   = form.input :image
   = form.input :description
-  = form.input :content, as: :text , input_html:  { rows: 10 ,cols: 50, class: 'ckeditor'}
-  = editing_help
+  = form.input :content, as: :ckeditor , input_html:  { rows: 10, cols: 50, ckeditor: { extraPlugins: 'dialogui,dialog,clipboard,widget,lineutils,codesnippet', uiColor: '#ECF0F1', height: '600px', :toolbar => 'Full'} }
   = form.button :submit

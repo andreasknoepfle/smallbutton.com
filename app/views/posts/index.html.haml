@@ -1,29 +1,17 @@
-= content_for :header do
-  = render "/informations/logo", size: 200
-  %h1 smallbutton.com
-  %h2 yet another code monkeys blog
+.heading.jumbotron
+  .container
+    = render "/informations/logo", size: 200
+    %h1 smallbutton.com
+    %h2 yet another code monkeys blog
 
 .container
   .row
     %section#cd-timeline.cd-container
-      - @posts.each do |post|
-        .cd-timeline-block
-          .cd-timeline-img.cd-picture
-            - if post.image.present?
-              = image_tag(image_post_path(post, style: :thumb))
-          .cd-timeline-content
-            = link_to post do
-              %h2= post.title
-            %p
-              = post.description
-            = link_to post, class: 'cd-read-more' do
-              Read more
-            %span.cd-date= time_ago_in_words post.created_at
+      = render @posts
+    = pageless(@posts.total_pages, posts_path)
+  - if user_signed_in?
+    .container
+      .panel.panel-default
+        .panel-body
 
-
-
-.container
-  .panel.panel-default
-    .panel-body
-      - if user_signed_in?
-        = link_to "New Post", new_post_path, class: 'btn btn-default'
+          = link_to "New Post", new_post_path, class: 'btn btn-default'

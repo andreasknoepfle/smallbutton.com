@@ -1,13 +1,3 @@
-GIT
-  remote: git://github.com/mongoid/mongoid.git
-  revision: f4f489e45adb0059fae6854d8a29ebb79cc6c8fd
-  specs:
-    mongoid (4.0.0)
-      activemodel (~> 4.0)
-      moped (~> 2.0.0)
-      origin (~> 2.1)
-      tzinfo (>= 0.3.37)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -55,7 +45,6 @@ GEM
     bootswatch-rails (3.2.4)
       railties (>= 3.1)
     bson (2.3.0)
-    bson_ext (1.5.1)
     builder (3.2.2)
     byebug (3.5.1)
       columnize (~> 0.8)
@@ -83,8 +72,9 @@ GEM
       mongoid (>= 3.0, < 5.0)
       mongoid-grid_fs (>= 1.3, < 3.0)
     chunky_png (1.3.3)
-    ckeditor_rails (4.4.3)
-      railties (>= 3.0)
+    ckeditor (4.1.0)
+      mime-types
+      orm_adapter (~> 0.5.0)
     coderay (1.1.0)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
@@ -96,6 +86,7 @@ GEM
     colorize (0.7.3)
     columnize (0.8.9)
     connection_pool (2.0.0)
+    daemons (1.1.9)
     debug_inspector (0.0.2)
     debugger-linecache (1.2.0)
     devise (3.4.1)
@@ -108,6 +99,7 @@ GEM
     erb2haml (0.1.5)
       html2haml
     erubis (2.7.0)
+    eventmachine (1.0.3)
     execjs (2.2.2)
     font-awesome-rails (4.2.0.0)
       railties (>= 3.2, < 5.0)
@@ -135,7 +127,13 @@ GEM
     jquery-turbolinks (2.1.0)
       railties (>= 3.1.0)
       turbolinks
+    jquery-ui-rails (4.0.1)
+      jquery-rails
+      railties (>= 3.1.0)
     json (1.8.1)
+    kaminari (0.16.1)
+      actionpack (>= 3.0.0)
+      activesupport (>= 3.0.0)
     libv8 (3.16.14.7)
     mail (2.6.1)
       mime-types (>= 1.16, < 3)
@@ -146,11 +144,14 @@ GEM
     modernizr-rails (2.7.1)
     mongo (1.3.1)
       bson (>= 1.3.1)
+    mongoid (4.0.0)
+      activemodel (~> 4.0)
+      moped (~> 2.0.0)
+      origin (~> 2.1)
+      tzinfo (>= 0.3.37)
     mongoid-grid_fs (2.1.0)
       mime-types (>= 1.0, < 3.0)
       mongoid (>= 3.0, < 5.0)
-    mongoid_orderable (4.1.0)
-      mongoid
     mongoid_slug (3.2.1)
       mongoid (> 3.0)
       stringex (~> 2.0)
@@ -212,8 +213,11 @@ GEM
       actionpack (~> 4.0)
       activemodel (~> 4.0)
     slop (3.6.0)
+    spaghetti (0.5.1)
+      jquery-rails (>= 2.1)
+      jquery-ui-rails (= 4.0.1)
     sprite-factory (1.6.1)
-    sprockets (2.12.2)
+    sprockets (2.12.3)
       hike (~> 1.2)
       multi_json (~> 1.0)
       rack (~> 1.0)
@@ -231,6 +235,10 @@ GEM
     therubyracer (0.12.1)
       libv8 (~> 3.16.14.0)
       ref
+    thin (1.6.2)
+      daemons (>= 1.0.9)
+      eventmachine (>= 1.0.0)
+      rack (>= 1.0.0)
     thor (0.19.1)
     thread_safe (0.3.4)
     tilt (1.4.1)
@@ -254,7 +262,6 @@ DEPENDENCIES
   binding_of_caller
   bootstrap-sass
   bootswatch-rails
-  bson_ext
   byebug
   capistrano-bundler
   capistrano-rails (~> 1.0.0)
@@ -262,7 +269,7 @@ DEPENDENCIES
   carrierwave
   carrierwave-mongoid
   chunky_png
-  ckeditor_rails
+  ckeditor
   coffee-rails (~> 4.0.0)
   devise
   erb2haml
@@ -272,10 +279,10 @@ DEPENDENCIES
   jbuilder (~> 1.2)
   jquery-rails
   jquery-turbolinks
+  kaminari
   mini_magick
   modernizr-rails
-  mongoid (~> 4.0.0.beta1)!
-  mongoid_orderable
+  mongoid (~> 4.0.0)
   mongoid_slug
   pundit
   rack-gridfs
@@ -286,7 +293,9 @@ DEPENDENCIES
   sass-rails (~> 5.0.0.beta1)
   sdoc
   simple_form (>= 3.1.0.rc1)
+  spaghetti
   sprite-factory
   therubyracer
+  thin
   turbolinks
   uglifier (>= 1.3.0)

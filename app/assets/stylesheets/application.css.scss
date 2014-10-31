@@ -9,6 +9,7 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
+ *= require spaghetti
  */
 
 
@@ -20,7 +21,7 @@ $brand-success:   #C0392B;
 $navbar-default-link-hover-color: #DCE0E1;
 $navbar-height: 60px;
 
-$body-bg:  #ECF0F1;
+$body-bg:  #ecf0f1;
 $font-family-sans-serif:  "Montserrat", "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
 
 
@@ -39,4 +40,4 @@ body { padding-top: 60px; }
 // Whatever application styles you have go last
 @import "base";
 @import "timeline";
-@import "monokai";
+@import "github";
