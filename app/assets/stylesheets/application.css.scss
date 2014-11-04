@@ -13,7 +13,7 @@
  */
 
 
-@import url(http://fonts.googleapis.com/css?family=Fredericka+the+Great|Montserrat:700,400);
+@import url(http://fonts.googleapis.com/css?family=Montserrat:700,400);
 
 $brand-primary:   #2c3e50;
 $brand-success:   #C0392B;
@@ -24,7 +24,7 @@ $navbar-height: 60px;
 $body-bg:  #ecf0f1;
 $font-family-sans-serif:  "Montserrat", "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
 
-
+$list-group-hover-bg: #F1C40F;
 
 
 @import "bootswatch/flatly/variables";

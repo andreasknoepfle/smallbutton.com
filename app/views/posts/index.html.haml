@@ -1,4 +1,4 @@
-.heading.jumbotron
+.heading.jumbotron.centered
   .container
     = render "/informations/logo", size: 200
     %h1 smallbutton.com
@@ -9,9 +9,3 @@
     %section#cd-timeline.cd-container
       = render @posts
     = pageless(@posts.total_pages, posts_path)
-  - if user_signed_in?
-    .container
-      .panel.panel-default
-        .panel-body
-
-          = link_to "New Post", new_post_path, class: 'btn btn-default'

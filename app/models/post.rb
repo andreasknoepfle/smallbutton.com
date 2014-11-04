@@ -12,5 +12,7 @@ class Post
 
   validates :title, :description, :content, presence: true
 
+  scope :published, -> { where(published: true) }
+
   mount_uploader :image, ImageUploader
 end

@@ -1,7 +1,7 @@
 class PostPolicy < Struct.new(:user, :post)
-    
+
   def show?
-    true  
+    post.published? || user
   end
 
   def new?
@@ -25,8 +25,12 @@ class PostPolicy < Struct.new(:user, :post)
   end
   class Scope < Struct.new(:user, :scope)
     def resolve
-      scope.all
+      if user
+        scope.all
+      else
+        scope.published
+      end
     end
   end
-    
+
 end

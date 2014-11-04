@@ -5,10 +5,23 @@
     - else
       = render "informations/logo", size: 60
   .cd-timeline-content
+    - if user_signed_in?
+      .btn-group.pull-right
+        = link_to edit_post_path(post), class: 'btn btn-primary' do
+          %i.fa.fa-pencil>
+        - if post.published
+          = link_to post_path(post, post: {published:false}), method: :put, class: 'btn btn-primary' do
+            %i.fa.fa-eye>
+        - else
+          = link_to post_path(post, post: {published:true}), method: :put, class: 'btn btn-primary' do
+            %i.fa.fa-eye-slash>
+        = link_to post_path(post), method: :delete, class: 'btn btn-danger' do
+          %i.fa.fa-times>
     = link_to post do
       %h2= post.title
     %p
       = post.description
+
     = link_to post, class: 'cd-read-more' do
       Read more
     %span.cd-date

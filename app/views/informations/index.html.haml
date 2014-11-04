@@ -1,0 +1,105 @@
+.heading.jumbotron
+  .container
+    .row
+      .col-md-2.col-xs-3
+        = image_tag "me.jpg", class: "img-circle img-responsive"
+      .col-md-10.col-xs-9
+        %h1.myname Andreas Knöpfle
+        %h3
+          %span.label.label-primary developer
+          %span.label.label-success student
+          %span.label.label-info more
+        %p.mydescription
+          I'm studying computer science at Freie Universität Berlin at the moment.
+          I also work part-time on some Projects mostly in Ruby on Rails. Check out
+          the projects below or visit my github profile for more. Hope you like my
+          little blog.
+.container
+
+
+  .row
+    .col-md-7
+
+      .cspacer
+        .page-header
+          %h1
+            Projects
+            %small
+              I'm working on
+        .row
+          .col-sm-6
+            .thumbnail.panel
+              = link_to "https://www.fairmondo.de" do
+                .extlogo.fairmondo.img-thumbnail
+                  %img{ src: "https://info.fairmondo.de/wp-content/uploads/2013/03/Logo_Claim_Web2_600x171.png", alt: "Fairmondo", class: " img-responsive"}
+
+              .caption
+                %h4
+                  Fairmondo
+                  &nbsp;
+                  = link_to "https://www.fairmondo.de" do
+                    %i.fa.fa-globe>
+                  &nbsp;
+                  = link_to "https://github.com/fairmondo/fairmondo" do
+                    %i.fa.fa-github>
+                Fairmondo is an open-source marketplace I've been working on for more than 3 years now.
+                It's online for Germany on www.fairmondo.de. Customers can sell and buy anything that is legal on the
+                German market. There is a focus on fairtrade and ecologic products. Check it out.
+
+
+          .col-sm-6
+            .thumbnail.panel
+              = link_to "https://www.treasures.io" do
+                .extlogo.treasures.img-thumbnail
+                  %img{ src: "https://raw.githubusercontent.com/railsrumble/r14-team-373/master/app/assets/images/logo.png", alt: "treasures.io", class: "img-responsive"}
+
+              .caption
+                %h4
+                  treasures.io
+                  &nbsp;
+                  = link_to "https://www.treasures.io" do
+                    %i.fa.fa-globe>
+                  &nbsp;
+                  = link_to "https://github.com/railsrumble/r14-team-373" do
+                    %i.fa.fa-github>
+                We've all at some point written code in our projects
+                that really should have been an extracted module, but we
+                just don't have the time to extract it and make it into a lib.
+                Treasures.io is the place to showcase these treasures so
+                that others may find and use them, maybe even make it into a lib themselves.
+                A project that I worked on during the
+                = link_to "RailsRumble", "https://github.com/railsrumble/r14-team-373"
+                with two of my colleagues.
+    .col-md-5
+
+      .cspacer
+        .page-header
+          %h1
+            Resources
+        .list-group.resources_list
+          = link_to "https://github.com/andreasknoepfle/", class: "list-group-item" do
+            %i.fa.fa-github
+            Me on github
+          = link_to "https://osrc.dfm.io/andreasknoepfle/", class: "list-group-item" do
+            %i.fa.fa-exclamation-circle
+            Open Source Report Card
+          = link_to "https://info.fairmondo.de/inteam-vier-fragen-an-andi/", class: "list-group-item" do
+            %i.fa.fa-microphone
+            Interview with me
+          :javascript
+            <!--
+            // protected email script by Joe Maller
+            // JavaScripts available at http://www.joemaller.com
+            // this script is free to use and distribute
+            // but please credit me and/or link to my site
+
+            emailE='fairmondo.de'
+            emailE=('andi' + '@' + emailE)
+            document.write('<A href="mailto:' + emailE + '" class="list-group-item"> <i class="fa fa-envelope-o"></i> Contact me </a>')
+             //-->
+          %noscript
+            %em
+              Email address protected by JavaScript.
+              %br/
+              Please enable JavaScript to contact me.
+          / Please enter a valid email address

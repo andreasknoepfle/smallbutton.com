@@ -16,7 +16,7 @@ class PostsController < ApplicationController
 
   def show
     authorize @post
-    @other_posts = policy_scope(Post).limit 5
+    @other_posts = policy_scope(Post).not_in(id: @post.id).desc(:created_at).limit 5
   end
 
   def new
@@ -52,6 +52,8 @@ class PostsController < ApplicationController
     case style
     when :thumb
       render_image @post.image.thumb.read
+    when :bigger
+      render_image @post.image.bigger.read
     else
       render_image @post.image.read
     end

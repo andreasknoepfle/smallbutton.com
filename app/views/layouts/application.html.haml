@@ -23,6 +23,11 @@
               %a{:href => informations_path}
                 %i.fa.fa-user
                 ABOUT
+            - if user_signed_in?
+              %li
+                = link_to "New Post", new_post_path
+
+
 
     = yield
     .footer

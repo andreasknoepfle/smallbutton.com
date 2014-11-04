@@ -5,16 +5,24 @@
       .btn-group
         = link_to edit_post_path(@post), class: 'btn btn-primary' do
           %i.fa.fa-pencil>
+        - if @post.published
+          = link_to post_path(@post, post: {published:false}), method: :put, class: 'btn btn-primary' do
+            %i.fa.fa-eye>
+        - else
+          = link_to post_path(@post, post: {published:true}), method: :put, class: 'btn btn-primary' do
+            %i.fa.fa-eye-slash>
         = link_to post_path(@post), method: :delete, class: 'btn btn-danger' do
           %i.fa.fa-times>
+
 .container.white
-  .spacer
-    .row
-      .col-md-9
+
+  .row
+    .col-md-9
+      .spacer
         .pull-right
           - if @post.image.present?
             = link_to image_post_path(@post), class: "img-spacer" do
-              = image_tag(image_post_path(@post), class: "img-thumbnail")
+              = image_tag(image_post_path(@post, style: :bigger), class: "img-thumbnail")
         by Andreas Knöpfle
         = time_ago_in_words @post.created_at
         ago
@@ -26,14 +34,13 @@
           = raw @post.content
 
         = link_to "Back", posts_path, class: 'btn btn-default', role: "button"
-      .col-md-3
+    .col-md-3
+      .spacer
         - @other_posts.each do |post|
-          .post
-            - if post.image.present?
-              .image.pull-right
-                = link_to post do
-                  = image_tag(image_post_path(post, style: :thumb))
-            = link_to post do
-              %h3= post.title
-              %p= post.description
-            .clearfix
+          = link_to post do
+            %h4= post.title
+          %p= post.description
+
+          %hr
+        .more.pull-right
+          = link_to "more", posts_path
