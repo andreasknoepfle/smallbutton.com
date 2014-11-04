@@ -24,13 +24,14 @@ module SmallbuttonCom
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
     config.generators.orm = :mongoid
-  
+
 
     config.autoload_paths += %W(#{config.root}/app/models/ckeditor)
 
   	config.filter_parameters += [:password, :password_confirmation]
 
     config.sass.unix_newlines = true
-
+    config.assets.precompile += Ckeditor.assets
+    config.assets.precompile += %w( ckeditor/* )
   end
 end
