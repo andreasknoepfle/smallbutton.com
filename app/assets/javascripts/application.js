@@ -15,6 +15,7 @@
 //= require jquery_ujs
 //= require bootstrap-sprockets
 //= require turbolinks
+//= require ckeditor/basepath
 //= require ckeditor/init
 //= require posts
 //= require highlight.pack
