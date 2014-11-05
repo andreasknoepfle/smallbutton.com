@@ -19,21 +19,32 @@
             %span.icon-bar
         #navbar-main.navbar-collapse.collapse
           %ul.nav.navbar-nav.navbar-right
+
             %li
               %a{:href => informations_path}
                 %i.fa.fa-user
+                &nbsp;
                 ABOUT
             - if user_signed_in?
               %li
                 = link_to "New Post", new_post_path
-
+            %li
+              = link_to "https://github.com/andreasknoepfle/" do
+                %i.fa.fa-github
+                &nbsp;
+                GITHUB
+            %li
+              = link_to "https://twitter.com/andreasknoepfle" do
+                %i.fa.fa-twitter
+                &nbsp;
+                TWITTER
 
 
     = yield
     .footer
       .container
         %p.text-muted
-          &copy; Copyright 2014 Andreas Knöpfle
+          &copy; Copyright 2014 Andreas Knöpfle;
           %span.pull-right.admin
             - if user_signed_in?
               = link_to destroy_user_session_path, method: :delete do
