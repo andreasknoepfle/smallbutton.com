@@ -2,6 +2,7 @@ class PostsController < ApplicationController
 
   responders :flash
   respond_to :html
+  respond_to :atom, only: [:index]
 
   before_action :authenticate_user! , except: [:index,:show,:image,:thumb]
   before_filter :set_post, only: [:show, :edit, :update, :destroy, :image]
@@ -11,6 +12,9 @@ class PostsController < ApplicationController
     @posts = policy_scope(Post).desc(:created_at).page(params[:page]).per(10)
     if request.xhr?
       render :partial => @posts
+    end
+    respond_with @posts do |format|
+      format.rss { redirect_to posts_path(:format => :atom), :status => :moved_permanently }
     end
   end
 

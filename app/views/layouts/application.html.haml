@@ -6,6 +6,8 @@
     = javascript_include_tag "application", "data-turbolinks-track" => true
     %link{rel:"stylesheet", href:"/favicon.ico" }
     = csrf_meta_tags
+    = auto_discovery_link_tag :atom, posts_path(format: :atom)
+    = auto_discovery_link_tag :rss,  posts_path(format: :rss) 
   %body
     .navbar.navbar-default.navbar-fixed-top
       .container
