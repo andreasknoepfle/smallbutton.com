@@ -20,6 +20,9 @@ gem 'devise'
 gem 'haml'
 gem "haml-rails"
 
+#comments
+gem "disqus"
+
 # markdown and highlight
 gem 'redcarpet'
 

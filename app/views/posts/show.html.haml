@@ -32,7 +32,10 @@
           = @post.description
         .post
           = raw @post.content
-
+          .clearfix
+        .comments
+          .spacer
+            = raw disqus_thread
         = link_to "Back", posts_path, class: 'btn btn-default', role: "button"
     .col-md-3
       .spacer

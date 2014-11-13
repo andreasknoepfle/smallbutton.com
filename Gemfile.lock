@@ -96,6 +96,8 @@ GEM
       responders
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
+    disqus (1.0.4)
+      json
     erb2haml (0.1.5)
       html2haml
     erubis (2.7.0)
@@ -272,6 +274,7 @@ DEPENDENCIES
   ckeditor
   coffee-rails (~> 4.0.0)
   devise
+  disqus
   erb2haml
   font-awesome-rails
   haml
