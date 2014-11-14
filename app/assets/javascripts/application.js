@@ -21,3 +21,5 @@
 //= require highlight.pack
 //= require modernizr
 //= require jquery.pageless
+//= require nprogress
+//= require nprogress-turbolinks

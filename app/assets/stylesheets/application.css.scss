@@ -37,6 +37,13 @@ body { padding-top: 60px; }
 @import "bootswatch/flatly/bootswatch";
 @import "font-awesome";
 
+$nprogress-color: lighten($brand-primary,20%);
+$nprogress-height: 7px;
+$nprogress-zindex: 10100;
+
+@import 'nprogress';
+@import 'nprogress-bootstrap';
+
 // Whatever application styles you have go last
 @import "base";
 @import "timeline";
