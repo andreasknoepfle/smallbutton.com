@@ -23,6 +23,9 @@ gem "haml-rails"
 #comments
 gem "disqus"
 
+#seo
+gem 'metamagic'
+
 # markdown and highlight
 gem 'redcarpet'
 

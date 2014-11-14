@@ -12,5 +12,5 @@ SmallbuttonCom::Application.routes.draw do
   resources :posts do
     get :image, on: :member
   end
-
+  get '/sitemap.xml'  => 'informations#sitemap', format: 'xml'
 end

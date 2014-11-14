@@ -139,6 +139,8 @@ GEM
     libv8 (3.16.14.7)
     mail (2.6.1)
       mime-types (>= 1.16, < 3)
+    metamagic (3.1.6)
+      rails (>= 3.0.0)
     mime-types (2.4.3)
     mini_magick (3.8.1)
       subexec (~> 0.2.1)
@@ -283,6 +285,7 @@ DEPENDENCIES
   jquery-rails
   jquery-turbolinks
   kaminari
+  metamagic
   mini_magick
   modernizr-rails
   mongoid (~> 4.0.0)

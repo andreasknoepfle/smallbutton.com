@@ -1,5 +1,13 @@
 class InformationsController < ApplicationController
-  def index
 
+  respond_to :html, only: :index
+  respond_to :xml, only: :sitemap
+
+  def sitemap
   end
+
+  def index
+  end
+
+
 end
