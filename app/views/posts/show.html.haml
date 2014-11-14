@@ -1,4 +1,6 @@
-- meta title: @post.title, description: @post.description
+- meta title: @post.title, description: @post.description, |
+    twitter: {  card: "summary", site: "@andreasknoepfle", title: @post.title, |
+    description: @post.description, image: @post.image.present? ? image_post_url(@post, style: :thumb) : "", url: post_url(@post)} |
 .container.heading
   .spacer
     %h1= @post.title

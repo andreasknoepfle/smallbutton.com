@@ -7,9 +7,8 @@
     = csrf_meta_tags
     = metamagic site: "smallbutton.com", title: [:title, :site], |
                 description: "yet another code monkeys blog", separator: " — ", |
-                keywords: ["rails","tutorials","ruby","optimization","smallbutton","developer"], |
-                twitter: {  card: "summary", site: "@andreasknoepfle", title: "smallbutton.com", |
-                  description: "yet another code monkeys blog", image: image_url("me.jpg"), url: informations_url} |
+                keywords: ["rails","tutorials","ruby","optimization","smallbutton","developer"] |
+
     = auto_discovery_link_tag :atom, posts_path(format: :atom)
     = auto_discovery_link_tag :rss,  posts_path(format: :rss)
   %body
