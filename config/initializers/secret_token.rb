@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-SmallbuttonCom::Application.config.secret_key_base = '857acd57f085528fdc13348107501994df3f20883cd65173ad6d6e3941d9188a6384f07ada64e1bf8ae4423248874e2b0947d635ca5e9f60474ac6a22f3ba491'
+SmallbuttonCom::Application.config.secret_key_base = ENV.fetch("SECRET_TOKEN_SMALLBUTTON",'857acd57f085528fdc13348107501994df3f20883cd65173ad6d6e3941d9188a6384f07ada64e1bf8ae4423248874e2b0947d635ca5e9f60474ac6a22f3ba491')
