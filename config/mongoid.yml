@@ -70,8 +70,4 @@ test:
 production:
   sessions:
     default:
-      database: smallbutton_com_production
-      hosts:
-        - localhost:27017
-      options:
-       
+      uri: <%= ENV['MONGODB_URL'] %>
