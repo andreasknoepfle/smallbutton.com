@@ -72,7 +72,7 @@ gem 'mongoid', "~> 4.0.0"
 gem "mongo_session_store-rails4"
 
 #mongoid extensions
-gem 'mongoid_slug'
+gem 'mongoid-slug'
 gem 'spaghetti'
 
 gem 'carrierwave'
