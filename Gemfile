@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
-ruby '2.2.2'
+ruby '2.2.3'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.1.6'
+gem 'rails', '4.2.5'
 
 # form library
 gem 'simple_form', ">= 3.1.0.rc1"
@@ -34,7 +34,7 @@ gem 'bootstrap-sass'
 gem 'bootswatch-rails'
 gem 'autoprefixer-rails'
 gem 'ckeditor'
-gem 'sass-rails', '~> 5.0.0.beta1'
+gem 'sass-rails', '~> 5.0'
 gem 'sass', '3.4.5'
 # sass libs
 
@@ -69,6 +69,7 @@ end
 
 # mongo db drivers
 gem 'mongoid', "~> 4.0.0"
+gem "mongo_session_store-rails4"
 
 #mongoid extensions
 gem 'mongoid_slug'
