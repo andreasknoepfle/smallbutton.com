@@ -68,7 +68,7 @@ group :doc do
 end
 
 # mongo db drivers
-gem 'mongoid', "~> 4.0.0"
+gem 'mongoid'
 gem "mongo_session_store-rails4"
 
 #mongoid extensions
