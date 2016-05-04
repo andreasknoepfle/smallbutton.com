@@ -7,7 +7,7 @@ Code for smallbutton.com
 
 === System dependencies
 
-* MongoDB 
+* MongoDB
     sudo apt-key adv --keyserver keyserver.ubuntu.com --recv 7F0CEB10
     sudo echo "deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen" | tee -a /etc/apt/sources.list.d/10gen.list
     sudo apt-get -y update
@@ -17,6 +17,7 @@ Code for smallbutton.com
 
 
 === How to run the test suite
+There are no tests right now. Fix this immediately.
 
 === Services (job queues, cache servers, search engines, etc.)
 
