@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
-ruby '2.2.3'
+ruby '2.3.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.5'
+gem 'rails', '4.2.6'
 
 # form library
 gem 'simple_form', ">= 3.1.0.rc1"
@@ -49,7 +49,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-gem 'therubyracer', platforms: :ruby
+#gem 'therubyracer', platforms: :ruby
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -80,20 +80,15 @@ gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'
 gem 'rack-gridfs'
 gem 'mini_magick'
 
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'unicorn'
+gem 'unicorn-rails'
+
+#dokku
+gem 'rails_12factor'
 
 group :development do
-  gem 'capistrano-rails', '~> 1.0.0'
-  gem 'capistrano-bundler'
-  gem 'capistrano-rbenv'
   gem 'erb2haml'
   gem "better_errors"
   gem "binding_of_caller"
+  gem 'pry-byebug'
 end
-
-gem 'unicorn'
-gem "byebug"
-
-# Use debugger
-# gem 'debugger', group: [:development, :test]
