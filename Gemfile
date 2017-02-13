@@ -20,9 +20,6 @@ gem 'devise'
 gem 'haml'
 gem "haml-rails"
 
-#comments
-gem "disqus"
-
 #seo
 gem 'metamagic'
 
