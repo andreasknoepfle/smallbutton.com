@@ -27,7 +27,7 @@
             = link_to image_post_path(@post), class: "img-spacer" do
               = image_tag(image_post_path(@post, style: :bigger), class: "img-thumbnail")
         by Andreas Knöpfle
-        = time_ago_in_words @post.created_at
+        = time_ago_in_words @post.updated_at
         ago
         %hr
         .description
