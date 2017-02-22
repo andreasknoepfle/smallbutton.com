@@ -18,9 +18,9 @@ gem 'devise'
 
 # haml templates
 gem 'haml'
-gem "haml-rails"
+gem 'haml-rails'
 
-#seo
+# seo
 gem 'metamagic'
 
 # markdown and highlight
