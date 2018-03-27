@@ -12,6 +12,7 @@ gem 'arcane'
 gem 'pundit'
 gem 'modernizr-rails'
 gem 'kaminari'
+gem 'kaminari-mongoid'
 
 # auth system
 gem 'devise'
