@@ -82,6 +82,7 @@ gem 'unicorn'
 gem 'unicorn-rails'
 
 # dokku
+gem 'date'
 gem 'did_you_mean'
 gem 'fileutils'
 gem 'rails_12factor'
