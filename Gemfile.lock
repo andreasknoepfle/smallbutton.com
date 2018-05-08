@@ -93,6 +93,7 @@ GEM
       railties (>= 4.1.0, < 6.0)
       responders
       warden (~> 1.2.3)
+    did_you_mean (1.2.1)
     erb2haml (0.1.5)
       html2haml
     erubi (1.7.1)
@@ -326,6 +327,7 @@ DEPENDENCIES
   ckeditor
   coffee-rails
   devise
+  did_you_mean
   erb2haml
   font-awesome-rails
   haml
@@ -361,7 +363,7 @@ DEPENDENCIES
   unicorn-rails
 
 RUBY VERSION
-   ruby 2.5.0p0
+   ruby 2.5.1p57
 
 BUNDLED WITH
    1.16.1
