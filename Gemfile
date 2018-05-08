@@ -83,6 +83,7 @@ gem 'unicorn-rails'
 
 # dokku
 gem 'did_you_mean'
+gem 'fileutils'
 gem 'rails_12factor'
 
 group :development do

@@ -100,6 +100,7 @@ GEM
     erubis (2.7.0)
     execjs (2.7.0)
     ffi (1.9.23)
+    fileutils (1.0.2)
     font-awesome-rails (4.7.0.4)
       railties (>= 3.2, < 6.0)
     globalid (0.4.1)
@@ -329,6 +330,7 @@ DEPENDENCIES
   devise
   did_you_mean
   erb2haml
+  fileutils
   font-awesome-rails
   haml
   haml-rails
