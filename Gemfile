@@ -1,18 +1,19 @@
+# frozen_string_literal: true
+
 source 'https://rubygems.org'
-ruby '2.3.1'
+ruby '2.5.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.6'
+gem 'rails', '5.2.0'
 
 # form library
-gem 'simple_form', ">= 3.1.0.rc1"
+gem 'simple_form'
 
 # controller responders
-gem 'responders'
-gem 'arcane'
-gem 'pundit'
-gem 'modernizr-rails'
 gem 'kaminari'
 gem 'kaminari-mongoid'
+gem 'modernizr-rails'
+gem 'pundit'
+gem 'responders'
 
 # auth system
 gem 'devise'
@@ -28,37 +29,37 @@ gem 'metamagic'
 gem 'redcarpet'
 
 # Use SCSS for stylesheets
+gem 'autoprefixer-rails'
 gem 'bootstrap-sass'
 gem 'bootswatch-rails'
-gem 'autoprefixer-rails'
 gem 'ckeditor'
-gem 'sass-rails', '~> 5.0'
-gem 'sass', '3.4.5'
+gem 'sass'
+gem 'sass-rails'
 # sass libs
 
+gem 'chunky_png'
 gem 'font-awesome-rails' # icons
 gem 'sprite-factory'
-gem 'chunky_png'
 
 # Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '>= 1.3.0'
+gem 'uglifier'
 
 # Use CoffeeScript for .js.coffee assets and views
-gem 'coffee-rails', '~> 4.0.0'
+gem 'coffee-rails'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-#gem 'therubyracer', platforms: :ruby
+# gem 'therubyracer', platforms: :ruby
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'turbolinks'
 gem 'jquery-turbolinks'
 gem 'nprogress-rails'
+gem 'turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 1.2'
+gem 'jbuilder'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
@@ -67,26 +68,26 @@ end
 
 # mongo db drivers
 gem 'mongoid'
-gem "mongo_session_store-rails4"
 
-#mongoid extensions
+# mongoid extensions
 gem 'mongoid-slug'
 gem 'spaghetti'
 
 gem 'carrierwave'
-gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'
-gem 'rack-gridfs'
+gem 'carrierwave-mongoid', require: 'carrierwave/mongoid'
 gem 'mini_magick'
+gem 'rack-gridfs'
 
 gem 'unicorn'
 gem 'unicorn-rails'
 
-#dokku
+# dokku
 gem 'rails_12factor'
 
 group :development do
+  gem 'better_errors'
+  gem 'binding_of_caller'
   gem 'erb2haml'
-  gem "better_errors"
-  gem "binding_of_caller"
   gem 'pry-byebug'
+  gem 'rubocop'
 end
