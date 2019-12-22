@@ -1,8 +1,0 @@
-= simple_form_for @post, :html => { :multipart => true  } do |form|
-
-  = form.input :title, input_html: {size: 50}
-  = form.input :published, as: :boolean, wrapper: :vertical_boolean
-  = form.input :image
-  = form.input :description
-  = form.input :content, as: :ckeditor , input_html:  { rows: 10, cols: 50, ckeditor: { extraPlugins: 'dialogui,dialog,clipboard,widget,lineutils,codesnippet', uiColor: '#ECF0F1', height: '600px', :toolbar => 'Full'} }
-  = form.button :submit
