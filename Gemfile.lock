@@ -203,7 +203,7 @@ GEM
       pry (~> 0.10)
     pundit (1.1.0)
       activesupport (>= 3.0.0)
-    rack (2.0.5)
+    rack (2.0.8)
     rack-gridfs (0.3.0)
       mongo (>= 0.20.1)
       rack
