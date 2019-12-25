@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "description": "Yet another codemonkeys website.",
   "scripts": {
-    "test": "jest test",
     "lint": "eslint \"**/*.{ts,tsx,js}\"",
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "export": "npm run build && next export"
   },
   "repository": {
     "type": "git",
