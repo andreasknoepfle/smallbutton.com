@@ -4,6 +4,7 @@
   "description": "Yet another codemonkeys website.",
   "scripts": {
     "test": "jest test",
+    "lint": "eslint \"**/*.{ts,tsx,js}\"",
     "dev": "next",
     "build": "next build",
     "start": "next start"
@@ -25,12 +26,21 @@
     "@types/node": "^13.1.0",
     "@zeit/next-css": "^1.0.1",
     "next": "^9.1.6",
+    "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "tachyons": "^4.11.1"
   },
   "devDependencies": {
     "@types/react": "^16.9.17",
+    "@typescript-eslint/eslint-plugin": "^2.13.0",
+    "@typescript-eslint/parser": "^2.13.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-plugin-import": "^2.19.1",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.17.0",
+    "eslint-plugin-react-hooks": "^1.7.0",
     "typescript": "^3.7.4"
   }
 }
