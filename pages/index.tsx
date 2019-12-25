@@ -16,6 +16,7 @@ export default () => (
       <p className="lh-copy mb5 tj mh3">
         <span className="f4">
           Hi, I&apos;m
+          {' '}
           <code>@andreasknoepfle</code>
         </span>
         ,
