@@ -1,5 +1,2 @@
-# Installation
-
-```
-npm install -g now
-```
+# smallbutton.com
+Code for smallbutton.com
