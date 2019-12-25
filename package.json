@@ -28,5 +28,9 @@
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "tachyons": "^4.11.1"
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.17",
+    "typescript": "^3.7.4"
   }
 }
