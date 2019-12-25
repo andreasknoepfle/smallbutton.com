@@ -1,3 +1,4 @@
+import React from 'react';
 import Layout from '../components/layout';
 
 export default () => (
@@ -13,9 +14,19 @@ export default () => (
         <img src="me.png" alt="me" className="w4 bb bw2 b--gold" />
       </div>
       <p className="lh-copy mb5 tj mh3">
-        <span className="f4">Hi, I'm <code>@andreasknoepfle</code></span>,
-        I am a ruby, elixir & JS dev currently working at <a className="link underline-hover red" href="https://bitcrowd.net">bitcrowd GmbH</a> in Berlin.
-        I also like to travel, climb, cycle, going on the slackline, photography, playing boardgames and pen & paper RPGs and all kinds of other things.
+        <span className="f4">
+          Hi, I&apos;m
+          <code>@andreasknoepfle</code>
+        </span>
+        ,
+        I am a ruby, elixir & JS dev currently working at
+        {' '}
+        <a className="link underline-hover red" href="https://bitcrowd.net">bitcrowd GmbH</a>
+        {' '}
+        in Berlin.
+        I also like to travel, climb, cycle, going on the slackline,
+        photography, playing boardgames and pen & paper RPGs and all
+        kinds of other things.
       </p>
     </article>
   </Layout>

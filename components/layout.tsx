@@ -1,13 +1,11 @@
+import React from 'react';
+import { string, node } from 'prop-types';
 import Head from 'next/head';
 import 'tachyons';
 
 import Footer from './footer';
 
-export default ({
-  children,
-  title = 'smallbutton.com - @andreasknoepfle',
-  description = 'Yet another code monkeys website.'
-}) => (
+const Layout = ({ children, title, description }) => (
   <>
     <Head>
       <title>{title}</title>
@@ -23,8 +21,21 @@ export default ({
     </header>
 
     <main className="sans-serif">
-    {children}
+      {children}
     </main>
     <Footer />
   </>
 );
+
+Layout.propTypes = {
+  children: node.isRequired,
+  title: string,
+  description: string,
+};
+
+Layout.defaultProps = {
+  title: 'smallbutton.com - @andreasknoepfle',
+  description: 'Yet another code monkeys website.',
+};
+
+export default Layout;
