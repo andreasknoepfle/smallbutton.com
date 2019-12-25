@@ -1,0 +1,32 @@
+{
+  "name": "smallbutton.com",
+  "version": "1.0.0",
+  "description": "Yet another codemonkeys website.",
+  "scripts": {
+    "test": "jest test",
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andreasknoepfle/smallbutton.com.git"
+  },
+  "keywords": [
+    "andreasknoepfle"
+  ],
+  "author": "andreasknoepfle",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andreasknoepfle/smallbutton.com/issues"
+  },
+  "homepage": "https://github.com/andreasknoepfle/smallbutton.com#readme",
+  "dependencies": {
+    "@types/node": "^13.1.0",
+    "@zeit/next-css": "^1.0.1",
+    "next": "^9.1.6",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "tachyons": "^4.11.1"
+  }
+}
