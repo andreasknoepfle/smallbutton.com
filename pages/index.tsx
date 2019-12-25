@@ -21,7 +21,7 @@ export default () => (
         ,
         I am a ruby, elixir & JS dev currently working at
         {' '}
-        <a className="link underline-hover red" href="https://bitcrowd.net">bitcrowd GmbH</a>
+        <a className="link underline-hover dark-red" href="https://bitcrowd.net">bitcrowd GmbH</a>
         {' '}
         in Berlin.
         I also like to travel, climb, cycle, going on the slackline,
