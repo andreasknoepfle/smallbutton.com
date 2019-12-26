@@ -1,7 +1,7 @@
 import React from 'react';
 import Layout from '../components/layout';
 
-export default () => (
+export default (): JSX.Element => (
   <Layout>
     <article className="mw7 center ph3 ph5-ns tc pt4">
       <h1 className="fw3 f3 mt0 mb3 ttu tracked">
