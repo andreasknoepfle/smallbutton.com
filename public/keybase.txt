@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/andreasknoepfle
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://smallbutton.com
+  * I am andreasknoepfle (https://keybase.io/andreasknoepfle) on keybase.
+  * I have a public key ASARu_h5X9Qu_Ad7CcPC2s5mqm6ZPlxCBaQuKaA6CGuTkQo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "012011bbf8795fd42efc077b09c3c2dace66aa6e993e5c4205a42e29a03a086b93910a",
+      "host": "keybase.io",
+      "kid": "012011bbf8795fd42efc077b09c3c2dace66aa6e993e5c4205a42e29a03a086b93910a",
+      "uid": "f58f077ed922add22759dfd00d72aa19",
+      "username": "andreasknoepfle"
+    },
+    "merkle_root": {
+      "ctime": 1578388808,
+      "hash": "ab3e168bf9707c899079010aac8052e1be1153d626b30c6aed3ff8649e37909f63ab6047063efb0e58d7521edf108d116a3c04d7fafb1970a1e392ad55f7025a",
+      "hash_meta": "1d14b18aed88d084f59970fc6e317481c5e56643038f4db97bc18d7282328eda",
+      "seqno": 14118490
+    },
+    "service": {
+      "entropy": "OB1rAuwys3V5lg8a1MA9clpt",
+      "hostname": "smallbutton.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "5.1.1"
+  },
+  "ctime": 1578388816,
+  "expire_in": 504576000,
+  "prev": "23df889b8e2e6f89806ca005fc09f72652860187bc57b9ca9386ecea4b0fbf44",
+  "seqno": 25,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgEbv4eV/ULvwHewnDwtrOZqpumT5cQgWkLimgOghrk5EKp3BheWxvYWTESpcCGcQgI9+Im44ub4mAbKAF/An3JlKGAYe8V7nKk4bs6ksPv0TEIE9iMzWiKtsSGzda3jEe70/6kvDcmsTnK4Kkof+xyWQbAgHCo3NpZ8RAb0QQFagDLdiHVDEUaeJYfMaPJ1yBbMlrQXw4qGuRYDMN4dKdmTM+am6EzMXjlGbKWdO8shjyeb+g4O3QeVo0AKhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIO2FL1e+NF3H/qNwVxuVJm1ZiY2jiPjzbs5WyqTCA+Uvo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/andreasknoepfle
+
+==================================================================
