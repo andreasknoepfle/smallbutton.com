@@ -11,7 +11,7 @@ export default (): JSX.Element => (
         smallbutton.com
       </h2>
       <div className="pa4">
-        <img src="me.png" alt="me" className="w4 bb bw2 b--gold" />
+        <img src="me.webp" alt="me" className="w4 bb bw2 b--gold" />
       </div>
       <p className="lh-copy mb5 tj mh3">
         <span className="f4">
