@@ -29,6 +29,7 @@ const Layout = ({
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:site" content={author} />
+      <meta name="twitter:creator" content={author} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={`${url}/logo.webp`} />
       <style>{'body{opacity:0;}'}</style>
@@ -55,7 +56,7 @@ Layout.propTypes = {
 };
 
 Layout.defaultProps = {
-  title: 'smallbutton.com',
+  title: 'smallbutton.com - Andreas Knöpfle',
   author: '@andreasknoepfle',
   description: 'Yet another code monkeys website.',
   url: 'https://smallbutton.com',
