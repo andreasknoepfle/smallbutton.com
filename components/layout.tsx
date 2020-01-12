@@ -18,7 +18,7 @@ const Layout = ({
         {`${title} - ${author}`}
       </title>
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-      <meta httpEquiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+      <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
       <meta name="description" content={description} />
       <link rel="canonical" href={url} />
       <meta property="og:type" content="website" />
