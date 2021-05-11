@@ -24,7 +24,6 @@
   "homepage": "https://github.com/andreasknoepfle/smallbutton.com#readme",
   "dependencies": {
     "@types/node": "^13.13.47",
-    "@zeit/next-css": "^1.0.1",
     "next": "^10.0.4",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
