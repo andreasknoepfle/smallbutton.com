@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Yet another codemonkeys website.",
   "scripts": {
-    "lint": "eslint \"**/*.{ts,tsx,js}\"",
+    "lint": "eslint \"**/*.{ts,tsx,js}\" --fix",
     "dev": "next",
     "build": "next build",
     "start": "next start",
