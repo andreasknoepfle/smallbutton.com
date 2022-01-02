@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="<%= description %>" />
+    <link rel="canonical" href="<%= config[:url] %>" />
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"/>
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="<%= title %>" />
+    <meta property="og:description" content="<%= description %>" />
+    <meta property="og:url" content= href="<%= config[:url] %>" />
+    <meta property="og:image" content="<%= url('images/logo.png') %>" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="<%= title %>" />
+    <meta name="twitter:site" content="<%= config[:author] %>" />
+    <meta name="twitter:creator" content="<%= config[:author] %>" />
+    <meta name="twitter:description" content="<%= description %>" />
+    <meta name="twitter:image" content="<%= url('images/logo.webp') %>" />
+    <style>{'body{opacity:0;}'}</style>
+    <title><%= title %></title>
+  </head>
+  <body>
+    <header class="dark-gray bg-gold center tc pt3 pb1">
+      <div class="pa4 tc">
+        <img src="images/logo.svg" class="h4 w4 dib" alt="Logo" />
+      </div>
+    </header>
+
+    <main class="sans-serif">
+      <%= yield %>
+    </main>
+    <%= partial "footer" %>
+  </body>
+</html>
