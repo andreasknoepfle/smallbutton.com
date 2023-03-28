@@ -20,12 +20,16 @@
     <meta name="twitter:description" content="<%= description %>" />
     <meta name="twitter:image" content="<%= url('images/logo.webp') %>" />
     <style>{'body{opacity:0;}'}</style>
+    <style>
+      .cryptedmail:after {content: attr(data-name) "@" attr(data-domain) "." attr(data-tld);}
+      .cryptedaddress:after {content: attr(data-name) "\A" attr(data-street) "\A" attr(data-city);}
+    </style>
     <title><%= title %></title>
   </head>
   <body>
     <header class="dark-gray bg-gold center tc pt3 pb1">
       <div class="pa4 tc">
-        <img src="images/logo.svg" class="h4 w4 dib" alt="Logo" />
+        <a href="/"><img src="images/logo.svg" class="h4 w4 dib" alt="Logo" /></a>
       </div>
     </header>
 
