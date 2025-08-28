@@ -1,0 +1,6 @@
+AllCops:
+  NewCops: enable
+
+Style/Encoding:
+  Exclude:
+    - config.rb
